@@ -327,9 +327,9 @@
                                     'Contract Account':Value(gblSelectedRequestIT.'Contract Account'),
                                     Latitude:Value(gblSelectedRequestIT.Latitude),
                                     Longitude:Value(gblSelectedRequestIT.Longitude),
-                                    'Product Line':gblSelectedRequestIT.'Product Line'
-                                
-                                        }
+                                    'Product Line':{Id:gblSelectedRequestIT.'Product Line'.Id,Value: "gblSelectedRequestIT.Title"},
+                                    'has a request': false
+                                    }
                                 );
                                 
                                 Patch(
@@ -341,19 +341,6 @@
                                     ),
                                     {
                                     Status:If( gblSelectedRequestIT.'Antenna Process'.Id = 2,{Value:"Inactivo"}, {Value:"Activo"})
-                                        }
-                                );
-                                
-                                
-                                Patch(
-                                
-                                    'Antenna Manager',
-                                    LookUp(
-                                        'Antenna Manager',
-                                        ID =  gblSelectedRequestIT.'Serial Number'.Id
-                                    ),
-                                    {
-                                    'has a request': false
                                         }
                                 );
                             PaddingRight: =5.00
@@ -508,6 +495,7 @@
 
                         lblDetailsComments_1 As label:
                             AutoHeight: =true
+                            DisplayMode: =DisplayMode.View
                             Font: =Font.'Segoe UI'
                             Height: =100
                             PaddingRight: =5.00
@@ -517,7 +505,7 @@
                             VerticalAlign: =VerticalAlign.Top
                             Width: =243
                             X: =754
-                            Y: =448
+                            Y: =471
                             ZIndex: =49
 
                         lblDetailsSitio_1 As label:
@@ -684,6 +672,7 @@
 
                         lblDetailsComments_2 As label:
                             AutoHeight: =true
+                            DisplayMode: =DisplayMode.View
                             Font: =Font.'Segoe UI'
                             Height: =59
                             PaddingRight: =5.00
@@ -692,7 +681,7 @@
                             Text: =gblSelectedRequestIT.'Focal Point Comments'
                             VerticalAlign: =VerticalAlign.Top
                             Width: =284
-                            X: =148
-                            Y: =465
+                            X: =138
+                            Y: =483
                             ZIndex: =59
 

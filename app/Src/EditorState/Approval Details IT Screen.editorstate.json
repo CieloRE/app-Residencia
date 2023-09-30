@@ -6303,7 +6303,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "DisplayMode",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "DisplayMode",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "ZIndex",
         "LineHeight",
         {
@@ -6349,7 +6356,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblDetailsComments_1",
-      "ParentIndex": 23,
+      "ParentIndex": 25,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6613,7 +6620,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "DisplayMode",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "DisplayMode",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "ZIndex",
         "LineHeight",
         {
@@ -6659,7 +6673,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblDetailsComments_2",
-      "ParentIndex": 25,
+      "ParentIndex": 26,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9645,7 +9659,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblSudlayer_2",
-      "ParentIndex": 24,
+      "ParentIndex": 23,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9998,7 +10012,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblSudlayer_5",
-      "ParentIndex": 26,
+      "ParentIndex": 24,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
