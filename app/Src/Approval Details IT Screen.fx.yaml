@@ -327,10 +327,19 @@
                                     'Contract Account':Value(gblSelectedRequestIT.'Contract Account'),
                                     Latitude:Value(gblSelectedRequestIT.Latitude),
                                     Longitude:Value(gblSelectedRequestIT.Longitude),
-                                    'has a request': false,
-                                    Status:If( gblSelectedRequestIT.'Antenna Process'.Value = "Suspención",{Value:"Inactivo"}, {Value:"Activo"})
+                                    'has a request': false
+                                        }
+                                );
                                 
+                                Patch(
                                 
+                                    'Antenna Manager',
+                                    LookUp(
+                                        'Antenna Manager',
+                                        ID =  gblSelectedRequestIT.'Serial Number'.Id
+                                    ),
+                                    {
+                                    Status:If( gblSelectedRequestIT.'Antenna Process'.Id = 2,{Value:"Inactivo"}, {Value:"Activo"})
                                         }
                                 );
                             PaddingRight: =5.00
