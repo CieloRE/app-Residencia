@@ -211,20 +211,8 @@
                             ChevronHoverBackground: =Self.ChevronBackground 
                             ChevronHoverFill: =Self.ChevronFill
                             DefaultSelectedItems: |-
-                                =With(
-                                    {
-                                        varManager: Office365Users.ManagerV2(gblUser.id)
-                                    },
-                                    {
-                                        Claims: "i:0#.f|membership|"&varManager.userPrincipalName,
-                                        Department: "",
-                                        DisplayName: varManager.displayName,
-                                        Email: varManager.mail,
-                                        JobTitle: "",
-                                        Picture: ""
-                                    }
-                                
-                                )
+                                =Office365Users.ManagerV2(gblUser.id)
+                                    
                             DisplayFields: =["DisplayName","JobTitle","Picture"]
                             Font: =Font.'Segoe UI'
                             Height: =37
