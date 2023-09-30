@@ -326,8 +326,9 @@
                                     Sudlayer:"TLG",
                                     'Contract Account':Value(gblSelectedRequestIT.'Contract Account'),
                                     Latitude:Value(gblSelectedRequestIT.Latitude),
-                                    Longitude:Value(gblSelectedRequestIT.Longitude)
-                                    
+                                    Longitude:Value(gblSelectedRequestIT.Longitude),
+                                    'Product Line':gblSelectedRequestIT.'Product Line'
+                                
                                         }
                                 );
                                 

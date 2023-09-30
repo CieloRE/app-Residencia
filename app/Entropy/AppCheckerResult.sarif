@@ -7945,36 +7945,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.gblSelectedRequestITAntenna"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.gblSelectedRequestITAntenna",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "gblSelectedRequestITAntenna",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App.satellite-dish"
                 }
               ],

@@ -178,16 +178,7 @@
                         Fill: =gblAppColors.primaryAccentDefault.rgba
                         HoverColor: =Self.Color
                         HoverFill: =ColorFade(Self.Fill, 50%)
-                        OnSelect: |
-                            =Set(
-                                gblSelectedRequestIT,
-                                ThisItem
-                            );
-                            Set(
-                                gblSelectedRequestITAntenna,
-                                ThisItem
-                            );
-                            Navigate('Approval Details IT Screen');
+                        OnSelect: =Set(gblSelectedRequestIT,ThisItem);Navigate('Approval Details IT Screen');
                         PaddingRight: =5.00
                         PaddingTop: =5.00
                         PressedFill: =Self.Fill
