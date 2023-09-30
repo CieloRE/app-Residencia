@@ -291,25 +291,7 @@
                                     }
                                 
                                 );
-                                Patch(
                                 
-                                    'Antenna Manager',
-                                    LookUp(
-                                        'Antenna Manager',
-                                        gblSelectedRequestIT.ID = drpDetailsSerialNumber_1.Selected.Id
-                                    ),
-                                    {Country:gblSelectedRequestIT.Country,
-                                    Zone:gblSelectedRequestIT.Zone,
-                                    District:gblSelectedRequestIT.District,
-                                    Sitio:gblSelectedRequestIT.Sitio,
-                                    'Bussines Unit':Value(lblDetailsBU_1.Text),
-                                    Sudlayer:"TLG",
-                                    'Contract Account':Value("lblDetailsCan_1"),
-                                    Latitude:Value(gblSelectedRequestIT.Latitude),
-                                    Longitude:Value(gblSelectedRequestIT.Longitude),
-                                    'has a request': false
-                                        }
-                                );
                                 
                                 
                                 If(
@@ -327,7 +309,27 @@
                                         NotificationType.Error,
                                         2000
                                     )
-                                )
+                                );
+                                
+                                Patch(
+                                
+                                    'Antenna Manager',
+                                    LookUp(
+                                        'Antenna Manager',
+                                        gblSelectedRequestIT.ID = ID
+                                    ),
+                                    {Country:gblSelectedRequestIT.Country,
+                                    Zone:gblSelectedRequestIT.Zone,
+                                    District:gblSelectedRequestIT.District,
+                                    Sitio:gblSelectedRequestIT.Sitio,
+                                    'Bussines Unit':Value(gblSelectedRequestIT.'Business Unit'),
+                                    Sudlayer:"TLG",
+                                    'Contract Account':Value(gblSelectedRequestIT.'Contract Account'),
+                                    Latitude:Value(gblSelectedRequestIT.Latitude),
+                                    Longitude:Value(gblSelectedRequestIT.Longitude),
+                                    'has a request': false
+                                        }
+                                );
                             PaddingRight: =5.00
                             PaddingTop: =5.00
                             Size: =11.86
