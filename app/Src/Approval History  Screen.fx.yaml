@@ -946,7 +946,7 @@
                     }
                 Height: =83
                 NavigationNotesIT: =colNavigationIT
-                Visible: =true//gblIsAdmin
+                Visible: =true //gblIsAdmin
                 Width: =697
                 X: =338
                 Y: =8

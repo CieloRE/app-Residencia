@@ -62,8 +62,7 @@
                     Items: |
                         =Filter (
                             'Request for Satellite Service',
-                            'Approval Status'.Value ="Pendiente",
-                            'Focal Point'.Email = gblUser.mail 
+                            'Approval Status'.Value ="Pendiente"
                         )
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
