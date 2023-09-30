@@ -1124,7 +1124,7 @@
                                     'Antenna Manager',
                                     LookUp(
                                         'Antenna Manager',
-                                         drpSerialNumber.Selected.ID = ID
+                                        gblSelectedRequest.'Serial Number'.Id = ID
                                     ),
                                     {'has a request': true}
                                 );

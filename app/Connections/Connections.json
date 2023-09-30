@@ -20,6 +20,47 @@
     "dependents": [],
     "id": "0648b904-c83a-4469-9310-aa651bc955bb"
   },
+  "164dc555-3d52-4300-87b9-6613e59b3bd6": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "87ded6a4-9719-47bf-afc9-214ebf101b71": {
+          "value": "shared_sharepointonline"
+        },
+        "9b62f517-1f39-4f3c-8ba5-4b29d53a394b": {
+          "value": "shared_office365"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "e1f219c9-9e2e-4f83-bb19-85ea102fd7b2"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_office365": {
+          "value": "9b62f517-1f39-4f3c-8ba5-4b29d53a394b"
+        },
+        "shared_sharepointonline": {
+          "value": "87ded6a4-9719-47bf-afc9-214ebf101b71"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "e1f219c9-9e2e-4f83-bb19-85ea102fd7b2"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "OPTEmail"
+    ],
+    "dependencies": {
+      "shared_office365": "9b62f517-1f39-4f3c-8ba5-4b29d53a394b",
+      "shared_sharepointonline": "87ded6a4-9719-47bf-afc9-214ebf101b71"
+    },
+    "dependents": [],
+    "id": "164dc555-3d52-4300-87b9-6613e59b3bd6"
+  },
   "382cc938-650d-4cc6-b99c-b3a83697dc62": {
     "appActions": [
       "SearchUserV2",
@@ -76,8 +117,7 @@
     "dependencies": {},
     "dependents": [
       "4db5f2ec-acbe-40f0-b2ef-c93a1013708d",
-      "f260ae15-8b55-4693-9e93-825db33f5668",
-      "58fb5753-7b6e-4437-903d-424d53e8033c"
+      "f260ae15-8b55-4693-9e93-825db33f5668"
     ],
     "id": "4ac7d83e-825f-4d27-9c91-ad3bcfb987b0"
   },
@@ -126,50 +166,19 @@
     "dependents": [],
     "id": "4db5f2ec-acbe-40f0-b2ef-c93a1013708d"
   },
-  "58fb5753-7b6e-4437-903d-424d53e8033c": {
-    "appActions": [
-      "Run"
-    ],
+  "87ded6a4-9719-47bf-afc9-214ebf101b71": {
     "connectionRef": {
-      "apiTier": "Standard",
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1653/1.0.1653.3403/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "4ac7d83e-825f-4d27-9c91-ad3bcfb987b0": {
-          "value": "shared_sharepointonline"
-        },
-        "9b62f517-1f39-4f3c-8ba5-4b29d53a394b": {
-          "value": "shared_office365"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "e1f219c9-9e2e-4f83-bb19-85ea102fd7b2"
-        }
-      },
-      "parameterHintsV2": {
-        "shared_office365": {
-          "value": "9b62f517-1f39-4f3c-8ba5-4b29d53a394b"
-        },
-        "shared_sharepointonline": {
-          "value": "4ac7d83e-825f-4d27-9c91-ad3bcfb987b0"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "e1f219c9-9e2e-4f83-bb19-85ea102fd7b2"
-        }
-      }
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1656/1.0.1656.3432/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
     },
     "datasets": {},
-    "dataSources": [
-      "OPTEmail"
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "164dc555-3d52-4300-87b9-6613e59b3bd6"
     ],
-    "dependencies": {
-      "shared_office365": "9b62f517-1f39-4f3c-8ba5-4b29d53a394b",
-      "shared_sharepointonline": "4ac7d83e-825f-4d27-9c91-ad3bcfb987b0"
-    },
-    "dependents": [],
-    "id": "58fb5753-7b6e-4437-903d-424d53e8033c"
+    "id": "87ded6a4-9719-47bf-afc9-214ebf101b71"
   },
   "9b62f517-1f39-4f3c-8ba5-4b29d53a394b": {
     "appActions": [],
@@ -187,7 +196,7 @@
     ],
     "dependencies": {},
     "dependents": [
-      "58fb5753-7b6e-4437-903d-424d53e8033c"
+      "164dc555-3d52-4300-87b9-6613e59b3bd6"
     ],
     "id": "9b62f517-1f39-4f3c-8ba5-4b29d53a394b"
   },
