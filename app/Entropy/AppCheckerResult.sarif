@@ -7855,6 +7855,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Home Screen'.conHomeMain.conConter.GalleryPendigRequest.conPendingRequestHome.txtPendingRequestHomeAntennaProcess_6.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home Screen'.conHomeMain.conConter.GalleryPendigRequest.conPendingRequestHome.txtPendingRequestHomeAntennaProcess_6.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home Screen",
+                "type": "'Home Screen'.conHomeMain.conConter.GalleryPendigRequest.conPendingRequestHome.txtPendingRequestHomeAntennaProcess_6"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.gblUsuarios"
                 }
               ],

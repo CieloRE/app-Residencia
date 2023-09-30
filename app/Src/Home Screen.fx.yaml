@@ -828,8 +828,8 @@
                         RadiusTopRight: =50
                         Size: =9.49
                         Width: =101.00
-                        X: =176
-                        Y: =112
+                        X: =345
+                        Y: =8
                         ZIndex: =6
 
                     imgPendingRequestHomeFocalPoint As image:
@@ -913,6 +913,57 @@
                         X: =Parent.Width -Self.Width -20
                         Y: =Parent.Height/2 - Self.Height/2
                         ZIndex: =11
+
+                    lblPendingRequestHomeDateRequest_36 As label:
+                        AutoHeight: =true
+                        Font: =Font.'Segoe UI'
+                        Height: =13
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.small
+                        Text: ="Status"
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =101
+                        X: =194
+                        Y: =88
+                        ZIndex: =12
+
+                    txtPendingRequestHomeAntennaProcess_6 As text:
+                        Align: =Align.Center
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =0
+                        Color: =RGBA(255, 255, 255, 1)
+                        Default: =ThisItem.'Approval Status'.Value
+                        DisabledColor: =ColorFade(Self.Fill, -80% )
+                        DisabledFill: |-
+                            =Switch(
+                            ThisItem.'Approval Status'.Value,
+                                "Approved", Color.Green,
+                                "Pendiente", Color.Blue, 
+                                "Rejected", Color.Red,
+                                "In Progress", Color.Coral
+                            
+                            )
+                        DisplayMode: =DisplayMode.Disabled
+                        Height: =24
+                        HoverColor: =RGBA(0, 0, 4, 0)
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        RadiusBottomLeft: =50
+                        RadiusBottomRight: =50
+                        RadiusTopLeft: =50
+                        RadiusTopRight: =50
+                        Size: =gblAppStyles.font.medium
+                        Width: =101.00
+                        X: =194
+                        Y: =106
+                        ZIndex: =13
 
             NavigationIT_17 As NavigationIT_3:
                 AppStyle: |-
