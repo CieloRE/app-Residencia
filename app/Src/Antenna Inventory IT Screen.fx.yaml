@@ -1,0 +1,618 @@
+"'Antenna Inventory IT Screen' As screen":
+    Fill: =ColorFade(gblAppStyles.background.rgba, 70%)
+    OnVisible: =
+
+    ContainerApprovalDetails_2 As groupContainer.horizontalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutMode: =LayoutMode.Auto
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        Width: =1366.00
+        X: =0.00
+        ZIndex: =3
+
+        cmpNavHome_4 As NavigationIT_1:
+            AppStyle: |-
+                ={
+                    fontSize:12,
+                    fontSizeTitle:14,
+                    colorButtom: RGBA(215,223,240,1),
+                    backgroundColor: RGBA(35,35,37,1 ), 
+                    buttomBackground: RGBA(207,08,63,1)
+                }
+            LayoutMinHeight: =640
+            Logo: ='logo app2'
+            NavigationNotesRequest: =colNavigation
+            Profile: |-
+                ={
+                    Profile: User().Image,
+                    DisplayName: gblUser.displayName,
+                    JobTitle: gblUser.jobTitle
+                }
+            Width: =279.99
+            X: =0.00
+
+        "'conContentApproval Details_2' As groupContainer.manualLayoutContainer":
+            AlignInContainer: =AlignInContainer.SetByContainer
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            Width: =1086.16
+            X: =279.84
+            ZIndex: =2
+
+            cvApprovalDetails_2 As fluidGrid.fluidGridWithBlankCard:
+                BorderThickness: =0
+                Height: =765
+                Width: =1086
+                X: =0.00
+                Y: =3
+                ZIndex: =2
+
+                DataCardApprovalDetails_2 As dataCard:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    BorderThickness: =0
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =765
+                    Width: =1086
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                    conApprovalDetails_2 As groupContainer.manualLayoutContainer:
+                        Fill: =gblAppStyles.white.rgba
+                        Height: =571
+                        PaddingBottom: =20
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        RadiusBottomLeft: =20
+                        RadiusBottomRight: =20
+                        RadiusTopLeft: =20
+                        RadiusTopRight: =20
+                        Width: =1031
+                        X: =20.00
+                        Y: =177
+                        ZIndex: =1
+
+                        "GalleryPendigRequest_6 As gallery.'BrowseLayout_Vertical_TwoTextOneImageTwoColumnOverlayVariant_ver5.0'":
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            DelayItemLoading: =true
+                            Fill: =ColorFade(gblAppStyles.background.rgba, 70%)
+                            Height: =Parent.Height
+                            Items: |
+                                = 'Antenna Manager'
+                            Layout: =Layout.Vertical
+                            LoadingSpinner: =LoadingSpinner.Data
+                            ShowScrollbar: =false
+                            TemplatePadding: =4
+                            TemplateSize: =281
+                            Width: =Parent.Width
+                            WrapCount: =2
+                            Y: =3
+                            ZIndex: =1
+
+                            Image7_1 As image:
+                                AutoDisableOnSelect: =false
+                                Fill: =gblAppStyles.white.rgba
+                                Height: =Parent.TemplateHeight
+                                Image: |+
+                                    =Switch(
+                                        ThisItem.Manufactured.Value,
+                                        "Starlink", 'satellite-stalink',
+                                        "AXESAT", 'satellite-axesat'
+                                    )
+                                    
+                                    
+                                ImagePosition: =ImagePosition.Fill
+                                OnSelect: =
+                                RadiusBottomLeft: =20
+                                RadiusBottomRight: =20
+                                RadiusTopLeft: =20
+                                RadiusTopRight: =20
+                                Width: =Parent.TemplateWidth
+                                ZIndex: =1
+
+                            Overlay2_1 As rectangle:
+                                Fill: =RGBA(0, 0, 0, 0.7)
+                                Height: =180
+                                OnSelect: =
+                                Width: =Parent.TemplateWidth
+                                Y: =Parent.TemplateHeight -Self.Height
+                                ZIndex: =2
+
+                            lblAntennaSeria_1 As label:
+                                AutoHeight: =true
+                                Color: =gblAppStyles.white.rgba
+                                Font: =Font.'Segoe UI'
+                                Height: =31
+                                OnSelect: =
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =gblAppStyles.font.large
+                                Text: =ThisItem.'Serial Number'
+                                VerticalAlign: =VerticalAlign.Top
+                                Width: =124
+                                X: =10
+                                Y: =109
+                                ZIndex: =3
+
+                            txtAntennaStatus_1 As label:
+                                Color: =gblAppStyles.white.rgba
+                                Font: =Font.'Segoe UI'
+                                FontWeight: = FontWeight.Normal
+                                Height: =26
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0.00
+                                PaddingTop: =0.00
+                                Size: =11.86
+                                Text: =ThisItem.Status.Value
+                                VerticalAlign: =VerticalAlign.Top
+                                Width: =66
+                                X: =lblAntennaStatus_2.X
+                                Y: =lblAntennaStatus_2.Y +lblAntennaStatus_2.Height
+                                ZIndex: =4
+
+                            lblAntennaStatus_2 As label:
+                                AutoHeight: =true
+                                Color: =gblAppStyles.white.rgba
+                                Font: =Font.'Segoe UI'
+                                Height: =13
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0.00
+                                PaddingTop: =0.00
+                                Size: =gblAppStyles.font.small
+                                Text: ="Status"
+                                VerticalAlign: =VerticalAlign.Top
+                                Width: =66
+                                X: =lblAntennaModel_1.X +lblAntennaModel_1.Width + 10
+                                Y: =lblAntennaSeria_1.Y + lblAntennaSeria_1.Height +10
+                                ZIndex: =5
+
+                            txtAnetnnaModel_1 As label:
+                                Color: =gblAppStyles.white.rgba
+                                Font: =Font.'Segoe UI'
+                                FontWeight: = FontWeight.Normal
+                                Height: =24
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0.00
+                                PaddingTop: =0.00
+                                Size: =11.86
+                                Text: =ThisItem.Model
+                                VerticalAlign: =VerticalAlign.Top
+                                Width: =108
+                                X: =lblAntennaModel_1.X
+                                Y: =lblAntennaModel_1.Y +lblAntennaModel_1.Height
+                                ZIndex: =6
+
+                            lblAntennaModel_1 As label:
+                                AutoHeight: =true
+                                Color: =gblAppStyles.white.rgba
+                                Font: =Font.'Segoe UI'
+                                Height: =13
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0.00
+                                PaddingTop: =0.00
+                                Size: =gblAppStyles.font.small
+                                Text: ="Model"
+                                VerticalAlign: =VerticalAlign.Top
+                                Width: =108
+                                X: =lblAntennaSeria_1.X
+                                Y: =lblAntennaSeria_1.Y + lblAntennaSeria_1.Height +10
+                                ZIndex: =7
+
+                            txtAntennaIP_1 As label:
+                                Color: =gblAppStyles.white.rgba
+                                Font: =Font.'Segoe UI'
+                                FontWeight: = FontWeight.Normal
+                                Height: =21
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0.00
+                                PaddingTop: =0.00
+                                Size: =11.86
+                                Text: =ThisItem.'IP Modem WFT'
+                                VerticalAlign: =VerticalAlign.Top
+                                Visible: =ThisItem.Manufactured.Value ="AXESAT"
+                                Width: =113.00
+                                X: =lblAntennaIP_1.X
+                                Y: =260
+                                ZIndex: =8
+
+                            lblAntennaIP_1 As label:
+                                AutoHeight: =true
+                                Color: =gblAppStyles.white.rgba
+                                Font: =Font.'Segoe UI'
+                                Height: =21
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0.00
+                                PaddingTop: =0.00
+                                Size: =gblAppStyles.font.small
+                                Text: ="IP WFT"
+                                VerticalAlign: =VerticalAlign.Top
+                                Visible: =ThisItem.Manufactured.Value ="AXESAT"
+                                Width: =113.00
+                                X: =124
+                                Y: =txtAntennaLatitude_1.Y + txtAntennaLatitude_1.Height +10
+                                ZIndex: =9
+
+                            txtAntennaSitio_1 As label:
+                                Color: =gblAppStyles.white.rgba
+                                Font: =Font.'Segoe UI'
+                                FontWeight: = FontWeight.Normal
+                                Height: =58
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0.00
+                                PaddingTop: =0.00
+                                Size: =11.86
+                                Text: =ThisItem.Sitio
+                                VerticalAlign: =VerticalAlign.Top
+                                Width: =108
+                                X: =lblAntennaSitio_1.X
+                                Y: =lblAntennaSitio_1.Y +lblAntennaSitio_1.Height
+                                ZIndex: =10
+
+                            lblAntennaSitio_1 As label:
+                                AutoHeight: =true
+                                Color: =gblAppStyles.white.rgba
+                                Font: =Font.'Segoe UI'
+                                Height: =13
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0.00
+                                PaddingTop: =0.00
+                                Size: =gblAppStyles.font.small
+                                Text: ="Sitio"
+                                VerticalAlign: =VerticalAlign.Top
+                                Width: =85
+                                X: =10
+                                Y: =txtAnetnnaModel_1.Y +txtAnetnnaModel_1.Height +10
+                                ZIndex: =11
+
+                            lblAntennaHasARequest_1 As label:
+                                AutoHeight: =true
+                                Color: =gblAppStyles.white.rgba
+                                Font: =Font.'Segoe UI'
+                                Height: =13
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0.00
+                                PaddingTop: =0.00
+                                Size: =gblAppStyles.font.small
+                                Text: ="Has a Request"
+                                VerticalAlign: =VerticalAlign.Top
+                                Width: =78
+                                X: =lblAntennaStatus_2.X +lblAntennaStatus_2.Width+ 48
+                                Y: =lblAntennaSeria_1.Y + lblAntennaSeria_1.Height +10
+                                ZIndex: =13
+
+                            txtAntennaLatitude_1 As label:
+                                Color: =gblAppStyles.white.rgba
+                                Font: =Font.'Segoe UI'
+                                FontWeight: = FontWeight.Normal
+                                Height: =21
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0.00
+                                PaddingTop: =0.00
+                                Size: =11.86
+                                Text: =ThisItem.Latitude
+                                VerticalAlign: =VerticalAlign.Top
+                                Width: =113.00
+                                X: =lblAntennaLatiude_1.X
+                                Y: =lblAntennaLatiude_1.Y +lblAntennaLatiude_1.Height
+                                ZIndex: =15
+
+                            lblAntennaLatiude_1 As label:
+                                AutoHeight: =true
+                                Color: =gblAppStyles.white.rgba
+                                Font: =Font.'Segoe UI'
+                                Height: =21
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0.00
+                                PaddingTop: =0.00
+                                Size: =gblAppStyles.font.small
+                                Text: ="Latitude"
+                                VerticalAlign: =VerticalAlign.Top
+                                Width: =113.00
+                                X: =121
+                                Y: =txtAntennaStatus_1.Y +txtAntennaStatus_1.Height +10
+                                ZIndex: =16
+
+                            txtAntennaLongitude_1 As label:
+                                Color: =gblAppStyles.white.rgba
+                                Font: =Font.'Segoe UI'
+                                FontWeight: = FontWeight.Normal
+                                Height: =21
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0.00
+                                PaddingTop: =0.00
+                                Size: =11.86
+                                Text: =ThisItem.Longitude
+                                VerticalAlign: =VerticalAlign.Top
+                                Width: =113.00
+                                X: =lblAntennaLongitude_1.X
+                                Y: =lblAntennaLongitude_1.Y +lblAntennaLongitude_1.Height
+                                ZIndex: =17
+
+                            lblAntennaLongitude_1 As label:
+                                AutoHeight: =true
+                                Color: =gblAppStyles.white.rgba
+                                Font: =Font.'Segoe UI'
+                                Height: =24
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0.00
+                                PaddingTop: =0.00
+                                Size: =gblAppStyles.font.small
+                                Text: ="Longitude"
+                                VerticalAlign: =VerticalAlign.Top
+                                Width: =113.00
+                                X: =241
+                                Y: =txtAntennaStatus_1.Y +txtAntennaStatus_1.Height +10
+                                ZIndex: =18
+
+                            txtAntennaMascara_1 As label:
+                                Color: =gblAppStyles.white.rgba
+                                Font: =Font.'Segoe UI'
+                                FontWeight: = FontWeight.Normal
+                                Height: =21
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0.00
+                                PaddingTop: =0.00
+                                Size: =11.86
+                                Text: =ThisItem.'IP Modem WFT'
+                                VerticalAlign: =VerticalAlign.Top
+                                Visible: =ThisItem.Manufactured.Value ="AXESAT"
+                                Width: =113.00
+                                X: =lblAntennaMascara_1.X
+                                Y: =260
+                                ZIndex: =19
+
+                            lblAntennaMascara_1 As label:
+                                AutoHeight: =true
+                                Color: =gblAppStyles.white.rgba
+                                Font: =Font.'Segoe UI'
+                                Height: =21
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0.00
+                                PaddingTop: =0.00
+                                Size: =gblAppStyles.font.small
+                                Text: ="IP WFT"
+                                VerticalAlign: =VerticalAlign.Top
+                                Visible: =ThisItem.Manufactured.Value ="AXESAT"
+                                Width: =113.00
+                                X: =240
+                                Y: =txtAntennaLongitude_1.Y + txtAntennaLongitude_1.Height +10
+                                ZIndex: =20
+
+                            tggAntennaHasRequest_1 As Toggle:
+                                Checked: =ThisItem.'has a request' = true
+                                DisplayMode: =DisplayMode.Disabled
+                                HandleOnFillColor: =RGBA(116, 116, 116, 1)
+                                Height: =24
+                                OffFillColor: =RGBA(168, 0, 0, 1)
+                                OffText: ="No"
+                                OnFillColor: =RGBA(54, 176, 75, 1)
+                                OnHoverFillColor: =RGBA(0, 0, 0, 0)
+                                OnSelect: =Select(Parent)
+                                OnText: ="Yes"
+                                Width: =78
+                                X: =lblAntennaHasARequest_1.X
+                                Y: =lblAntennaHasARequest_1.Y +lblAntennaHasARequest_1.Height
+                                ZIndex: =21
+
+                            lblAntennaStatus_3 As label:
+                                Color: =gblAppStyles.white.rgba
+                                Font: =Font.'Segoe UI'
+                                Height: =24
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0.00
+                                PaddingTop: =0.00
+                                Size: =gblAppStyles.font.small
+                                Text: ="Editar Antenna"
+                                VerticalAlign: =VerticalAlign.Top
+                                Width: =79
+                                X: =416
+                                Y: =12
+                                ZIndex: =23
+
+                            Icon2 As icon.Edit:
+                                Color: =gblAppStyles.neutralStrong.rgba
+                                Height: =39
+                                Icon: =Icon.Edit
+                                OnSelect: |-
+                                    =Set(gblSelectedAntennaEdit, ThisItem);
+                                    Navigate('Antenna Edit IT Screen');
+                                Width: =59
+                                X: =436
+                                Y: =12
+                                ZIndex: =24
+
+                            txtAntennaIP_2 As label:
+                                Color: =gblAppStyles.white.rgba
+                                Font: =Font.'Segoe UI'
+                                FontWeight: = FontWeight.Normal
+                                Height: =21
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0.00
+                                PaddingTop: =0.00
+                                Size: =11.86
+                                Text: =ThisItem.'IP Modem MGMT'
+                                VerticalAlign: =VerticalAlign.Top
+                                Visible: =ThisItem.Manufactured.Value ="AXESAT"
+                                Width: =113.00
+                                X: =354
+                                Y: =156
+                                ZIndex: =26
+
+                            lblAntennaIP_2 As label:
+                                AutoHeight: =true
+                                Color: =gblAppStyles.white.rgba
+                                Font: =Font.'Segoe UI'
+                                Height: =21
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0.00
+                                PaddingTop: =0.00
+                                Size: =gblAppStyles.font.small
+                                Text: ="IP MGMT "
+                                VerticalAlign: =VerticalAlign.Top
+                                Visible: =ThisItem.Manufactured.Value ="AXESAT"
+                                Width: =113.00
+                                X: =354
+                                Y: =142
+                                ZIndex: =27
+
+                            txtAntennaMascara_2 As label:
+                                Color: =gblAppStyles.white.rgba
+                                Font: =Font.'Segoe UI'
+                                FontWeight: = FontWeight.Normal
+                                Height: =21
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0.00
+                                PaddingTop: =0.00
+                                Size: =11.86
+                                Text: =ThisItem.'IP Modem WFT'
+                                VerticalAlign: =VerticalAlign.Top
+                                Visible: =ThisItem.Manufactured.Value ="AXESAT"
+                                Width: =113.00
+                                X: =354
+                                Y: =204
+                                ZIndex: =28
+
+                            lblAntennaMascara_2 As label:
+                                AutoHeight: =true
+                                Color: =gblAppStyles.white.rgba
+                                Font: =Font.'Segoe UI'
+                                Height: =21
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0.00
+                                PaddingTop: =0.00
+                                Size: =gblAppStyles.font.small
+                                Text: ="Mascara 1"
+                                VerticalAlign: =VerticalAlign.Top
+                                Visible: =ThisItem.Manufactured.Value ="AXESAT"
+                                Width: =113.00
+                                X: =354
+                                Y: =191
+                                ZIndex: =29
+
+                            lblAntennaSeria_2 As label:
+                                AutoHeight: =true
+                                Color: =gblAppStyles.white.rgba
+                                Font: =Font.'Segoe UI'
+                                Height: =31
+                                OnSelect: =
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =gblAppStyles.font.large
+                                Text: =ThisItem.Service
+                                VerticalAlign: =VerticalAlign.Top
+                                Visible: =ThisItem.Manufactured.Value ="AXESAT"
+                                Width: =124
+                                X: =371
+                                Y: =107
+                                ZIndex: =30
+
+    lblTitleHome_4 As label:
+        Color: =gblAppStyles.body.rgba
+        DisplayMode: =DisplayMode.View
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =33
+        OnSelect: =
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        Size: =gblAppStyles.font.extralarge
+        Text: ="Approvals History"
+        Width: =318
+        X: =321
+        Y: =49
+        ZIndex: =4
+
+    lblSubtitleHome_4 As label:
+        Color: =gblAppStyles.neutralStrong.rgba
+        DisplayMode: =DisplayMode.View
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =31
+        OnSelect: =
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        Size: =gblAppStyles.font.normal
+        Text: ="Request with Approved status"
+        Width: =268
+        X: =321
+        Y: =82
+        ZIndex: =5
+
+    NavigationIT_14 As NavigationIT_3:
+        AppStyle: |-
+            ={
+                fontSizeTitle:17,
+                colorButtom: RGBA(215,223,240,1),
+                backgroundColor: RGBA(35,35,37,1 ), 
+                buttomBackground: RGBA(207,08,63,1)
+            }
+        Height: =86
+        NavigationNotesIT: =colNavigationIT
+        Visible: =gblIsAdmin
+        Width: =693
+        X: =639
+        Y: =27
+        ZIndex: =6
+
+    lblSubtitleHome_5 As label:
+        Color: =gblAppStyles.neutralStrong.rgba
+        DisplayMode: =DisplayMode.View
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =26
+        OnSelect: =Navigate('Antenna Create IT Screen');
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        Size: =gblAppStyles.font.normal
+        Text: ="ADD ANTENNA"
+        Width: =123
+        X: =1124
+        Y: =137
+        ZIndex: =7
+
+    Icon3 As icon.Add:
+        Color: =gblAppStyles.neutralStrong.rgba
+        Height: =45
+        Icon: =Icon.Add
+        OnSelect: =Navigate('Antenna Create IT Screen');
+        Width: =37
+        X: =1258
+        Y: =128
+        ZIndex: =8
+

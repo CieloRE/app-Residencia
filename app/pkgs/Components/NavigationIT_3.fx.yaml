@@ -1,0 +1,99 @@
+NavigationIT_3 As CanvasComponent:
+    AppStyle: |-
+        ={
+            fontSize:12,
+            fontSizeTitle:18,
+            colorButtom: RGBA(215,223,240,1),
+            backgroundColor: RGBA(35,35,37,1 ), 
+            buttomBackground: RGBA(0,94,146,1)
+        }
+    Fill: =RGBA(2,2,2,0)
+    Height: =App.Height
+    NavigationNotesIT: |-
+        =Table(
+            {
+                Title: "Solicitudes",
+                Screen: Blank(),
+                Icon: "data:image/svg+xml," & EncodeUrl(
+                "<svg width='24' height='24' fill='none' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M12.023 2.999a6.47 6.47 0 0 0-.71 1.5L5.25 4.5A1.75 1.75 0 0 0 3.5 6.25v8.5c0 .966.784 1.75 1.75 1.75h2.249v3.75l5.015-3.75h6.236a1.75 1.75 0 0 0 1.75-1.75l.001-2.483a6.517 6.517 0 0 0 1.5-1.077L22 14.75A3.25 3.25 0 0 1 18.75 18h-5.738L8 21.75a1.25 1.25 0 0 1-1.999-1V18h-.75A3.25 3.25 0 0 1 2 14.75v-8.5A3.25 3.25 0 0 1 5.25 3l6.773-.001ZM17.5 1a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11Zm2.646 3.146L16.055 8.24 14.9 6.7a.5.5 0 0 0-.8.6l1.5 2a.5.5 0 0 0 .754.054l4.5-4.5a.5.5 0 0 0-.707-.708Z' fill='#fff'/></svg>"
+                    ) 
+            },
+            {
+                Title: "Aprobaciones",
+                Screen: App.ActiveScreen,
+                Icon: "data:image/svg+xml," & EncodeUrl(
+                "<svg width='24' height='24' fill='none' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M11.78 1.72a.75.75 0 1 0-1.06 1.06L11.94 4a9 9 0 1 0 9.023 9.82.75.75 0 0 0-1.494-.135A7.5 7.5 0 1 1 11.94 5.5l-1.22 1.22a.75.75 0 0 0 1.061 1.06l2.5-2.5a.75.75 0 0 0 0-1.06l-2.5-2.5Z' fill='#fff'/><path d='M15.784 10.22a.75.75 0 0 1 0 1.06l-4.504 4.504a.75.75 0 0 1-1.06 0l-2-2a.75.75 0 0 1 1.06-1.06l1.47 1.469 3.973-3.973a.75.75 0 0 1 1.06 0Z' fill='#fff'/></svg>"
+                    ) 
+            },
+            {
+                Title: "Antenas Satelitales",
+                Screen: App.ActiveScreen,
+                Icon: "data:image/svg+xml," & EncodeUrl(
+                "<svg width='24' height='24' fill='none' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='m10.05 15.42 6.256-8.476a.694.694 0 0 1 1.235.57l-.03.098-3.87 9.8a2.07 2.07 0 1 1-3.737-1.766l.069-.115.076-.11 6.257-8.477-6.257 8.476Zm3.8-2.623-2.594 3.514-.04.063a.57.57 0 0 0 .223.775l.066.032a.57.57 0 0 0 .7-.238l.04-.083 1.605-4.063Zm-1.75-1.926-1.226 1.66a3.32 3.32 0 0 0-2.29 3.024.75.75 0 0 1-1.5-.063A4.819 4.819 0 0 1 9.14 11.74c.9-.631 1.942-.911 2.961-.87Zm4.167 2.752c.28.586.436 1.22.463 1.866a.75.75 0 0 1-1.376.444l.913-2.31Zm-2.233-5.37-.969 1.311a6.22 6.22 0 0 0-4.736 1.02 6.208 6.208 0 0 0-2.419 3.39.75.75 0 0 1-1.442-.412 7.708 7.708 0 0 1 3-4.207 7.724 7.724 0 0 1 6.566-1.102Zm3.51 2.138c.25.267.486.556.702.865a7.727 7.727 0 0 1 1.097 2.288.75.75 0 0 1-1.44.417 6.23 6.23 0 0 0-.885-1.845l-.102-.138.627-1.587ZM15.98 5.852l-.088.054c-.123.082-.236.18-.337.295l-.096.12-.54.732a9.138 9.138 0 0 0-8.261 1.146A9.103 9.103 0 0 0 3.38 12.37a.75.75 0 1 1-1.398-.543A10.603 10.603 0 0 1 5.799 6.97 10.642 10.642 0 0 1 15.98 5.852Zm2.629 1.562a10.646 10.646 0 0 1 2.022 2.171c.49.702.892 1.451 1.199 2.235a.75.75 0 1 1-1.397.547 9.188 9.188 0 0 0-2.327-3.405l.381-.964c.076-.19.115-.388.122-.584Z' fill='#fff'/></svg>"
+                    ) 
+            },
+             {
+                Title: "Dashboard",
+                Screen: App.ActiveScreen,
+                Icon: "data:image/svg+xml," & EncodeUrl(
+                "<svg width='24' height='24' fill='none' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M10 9a2 2 0 1 1 4 0v6a2 2 0 1 1-4 0V9Zm2-.5a.5.5 0 0 0-.5.5v6a.5.5 0 0 0 1 0V9a.5.5 0 0 0-.5-.5ZM5 14a2 2 0 1 1 4 0v1a2 2 0 1 1-4 0v-1Zm2.5 0a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0v-1ZM17 10a2 2 0 0 0-2 2v3a2 2 0 1 0 4 0v-3a2 2 0 0 0-2-2Zm.5 2v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 1 0Z' fill='#fff'/><path d='M2 6.75A2.75 2.75 0 0 1 4.75 4h14.5A2.75 2.75 0 0 1 22 6.75v10.5A2.75 2.75 0 0 1 19.25 20H4.75A2.75 2.75 0 0 1 2 17.25V6.75ZM4.75 5.5c-.69 0-1.25.56-1.25 1.25v10.5c0 .69.56 1.25 1.25 1.25h14.5c.69 0 1.25-.56 1.25-1.25V6.75c0-.69-.56-1.25-1.25-1.25H4.75Z' fill='#fff'/></svg>"
+                    ) 
+            }
+            
+        )
+    Width: =700
+    X: =1
+    Y: =0
+    ZIndex: =1
+
+    "Gallery3 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver5.0'":
+        DelayItemLoading: =true
+        Fill: =Parent.Fill
+        Height: =72
+        Items: =Parent.NavigationNotesIT
+        LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: =Navigate(ThisItem.Screen)
+        ShowScrollbar: =false
+        TemplatePadding: =2
+        TemplateSize: =169
+        Width: =684
+        X: =10
+        Y: =5
+        ZIndex: =1
+
+        btmNavigation_2 As button:
+            Align: =Align.Left
+            BorderColor: =
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =NavigationIT_3.AppStyle.colorButtom
+            Fill: |-
+                =If(
+                    ThisItem.Screen= App.ActiveScreen,
+                    NavigationIT_3.AppStyle.buttomBackground,
+                    RGBA(140,140,140,1)
+                    )
+            Font: =Font.'Segoe UI'
+            Height: =52
+            HoverFill: =ColorFade(Self.Fill, -10%)
+            OnSelect: =Select(Parent)
+            PaddingLeft: =imgIconNavigation_2.Width + 12
+            PressedColor: =Self.Color
+            PressedFill: =ColorFade(Self.Fill, -20%)
+            Size: =NavigationIT_3.AppStyle.fontSize
+            Text: =ThisItem.Title
+            Width: =Parent.TemplateWidth -10
+            Y: =9
+            ZIndex: =2
+
+        imgIconNavigation_2 As image:
+            Height: =Self.Width
+            Image: =ThisItem.Icon
+            OnSelect: =Select(Parent)
+            PaddingBottom: =5
+            PaddingTop: =12
+            Width: =40
+            X: =btmNavigation_2.X  + 8
+            Y: =12
+            ZIndex: =3
+

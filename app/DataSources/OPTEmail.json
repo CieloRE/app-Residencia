@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "e1f219c9-9e2e-4f83-bb19-85ea102fd7b2",
+    "Name": "OPTEmail",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": null
+  }
+]

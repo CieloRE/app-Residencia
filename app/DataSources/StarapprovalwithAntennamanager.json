@@ -1,0 +1,10 @@
+[
+  {
+    "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
+    "FlowNameId": "88596dbb-e35c-4fa9-8937-9e88cf37fbea",
+    "Name": "StarapprovalwithAntennamanager",
+    "ServiceKind": "ConnectedWadl",
+    "Type": "ServiceInfo",
+    "WorkflowEntityId": null
+  }
+]

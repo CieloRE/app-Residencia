@@ -1,0 +1,954 @@
+"'Approval History  Screen' As screen":
+    Fill: =ColorFade(gblAppStyles.background.rgba, 70%)
+    OnVisible: |
+        =
+
+    conHomeHistory As groupContainer.horizontalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutMode: =LayoutMode.Auto
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        Width: =1366.00
+        X: =0.00
+        ZIndex: =1
+
+        cmpNavHistory As NavigationIT_1:
+            AppStyle: |-
+                ={
+                    fontSize:12,
+                    fontSizeTitle:14,
+                    colorButtom: RGBA(215,223,240,1),
+                    backgroundColor: RGBA(35,35,37,1 ), 
+                    buttomBackground: RGBA(207,08,63,1)
+                }
+            LayoutMinHeight: =640
+            Logo: ='logo app2'
+            NavigationNotesRequest: =colNavigation
+            Profile: |-
+                ={
+                    Profile: User().Image,
+                    DisplayName: gblUser.displayName,
+                    JobTitle: gblUser.jobTitle
+                }
+            Width: =279.99
+            X: =0.00
+
+        conConter_1 As groupContainer.manualLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            Width: =1086.16
+            X: =279.84
+            ZIndex: =2
+
+            lblTitleHome_1 As label:
+                Color: =gblAppStyles.body.rgba
+                DisplayMode: =DisplayMode.View
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =33
+                OnSelect: =
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                Size: =gblAppStyles.font.extralarge
+                Text: ="My Approval History"
+                Width: =318
+                X: =20
+                Y: =40
+                ZIndex: =1
+
+            lblSubtitleHome_1 As label:
+                Color: =gblAppStyles.neutralStrong.rgba
+                DisplayMode: =DisplayMode.View
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =31
+                OnSelect: =
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0.00
+                PaddingTop: =0.00
+                Size: =gblAppStyles.font.normal
+                Text: =$"{gblUser.givenName}"
+                Width: =268
+                X: =lblTitleHome_1.X
+                Y: =lblTitleHome_1.Y + lblTitleHome_1.Height
+                ZIndex: =2
+
+            "GalleryPendigRequest_2 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
+                BorderColor: =RGBA(0, 0, 0, 0)
+                DelayItemLoading: =true
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(0, 0, 3, 0)
+                Height: =638
+                Items: |-
+                    =Filter (
+                        'Request for Satellite Service',
+                        Person.DisplayName = gblUser.displayName
+                    )
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                ShowScrollbar: =false
+                TemplateSize: =436
+                Width: =1049
+                X: =lblSubtitleHome_1.X -Self.TemplatePadding
+                Y: =110
+                ZIndex: =3
+
+                conPendingRequestHome_2 As groupContainer.manualLayoutContainer:
+                    BorderThickness: =1
+                    Fill: |-
+                        =gblAppStyles.white.rgba
+                        //ColorValue(LookUp('Service Type', ID = ThisItem.'Service Type'.Id).Color)
+                    Height: =405
+                    PaddingBottom: =15
+                    PaddingLeft: =15
+                    PaddingTop: =30
+                    RadiusBottomLeft: =20
+                    RadiusBottomRight: =20
+                    RadiusTopLeft: =20
+                    RadiusTopRight: =20
+                    Width: =977
+                    X: =27
+                    Y: =15
+                    ZIndex: =1
+
+                    txtPendingRequestHomeAntennaProcess_2 As text:
+                        Align: =Align.Center
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =0
+                        Color: =RGBA(255, 255, 255, 1)
+                        Default: =ThisItem.'Service Type'.Value
+                        DisabledColor: =ColorFade(Self.Fill, -80% )
+                        DisabledFill: =ColorValue(LookUp('Service Type', ID = ThisItem.'Service Type'.Id).Color)
+                        DisplayMode: =DisplayMode.Disabled
+                        Height: =24
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        RadiusBottomLeft: =50
+                        RadiusBottomRight: =50
+                        RadiusTopLeft: =50
+                        RadiusTopRight: =50
+                        Size: =gblAppStyles.font.medium
+                        Width: =101.00
+                        X: =lblPendingRequestHomeDateRequest_19.X
+                        Y: =lblPendingRequestHomeDateRequest_19.Y +lblPendingRequestHomeDateRequest_19.Height + 5
+                        ZIndex: =1
+
+                    imgPendingRequestHomeFocalPoint_2 As image:
+                        Height: =Self.Width
+                        Image: =ThisItem.'Focal Point'.Picture
+                        OnSelect: =
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        RadiusBottomLeft: =60
+                        RadiusBottomRight: =60
+                        RadiusTopLeft: =60
+                        RadiusTopRight: =60
+                        Width: =25
+                        X: =lblPendingRequestHomeFocalPoint_2.X
+                        Y: =lblPendingRequestHomeFocalPoint_2.Y +20
+                        ZIndex: =2
+
+                    txtPendingRequestHomeFocalPoint_2 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: = FontWeight.Normal
+                        Height: =20
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =11.86
+                        Text: =ThisItem.'Focal Point'.DisplayName
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =132.00
+                        X: =imgPendingRequestHomeFocalPoint_2.X +30
+                        Y: =imgPendingRequestHomeFocalPoint_2.Y + imgPendingRequestHomeFocalPoint_2.Height/2 - Self.Height/2
+                        ZIndex: =3
+
+                    lblPendingRequestHomeFocalPoint_2 As label:
+                        AutoHeight: =true
+                        Font: =Font.'Segoe UI'
+                        Height: =17
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.small
+                        Text: =" Approved by"
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =113.00
+                        X: =23
+                        Y: =262
+                        ZIndex: =4
+
+                    lblPendingRequestHomeAntenaProcess_2 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =23
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.large
+                        Text: |-
+                            ="Request Details:"
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =392
+                        X: =14
+                        Y: =11
+                        ZIndex: =5
+
+                    lblPendingRequestHomeAntenaProcess_3 As label:
+                        AutoHeight: =true
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =20
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.medium
+                        Text: ="Details of the approval (IT Department)"
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =319
+                        X: =535
+                        Y: =235
+                        ZIndex: =6
+
+                    imgPendingRequestHomeFocalPoint_3 As image:
+                        Height: =Self.Width
+                        Image: =ThisItem.'Approve By IT'.Picture
+                        OnSelect: =
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        RadiusBottomLeft: =60
+                        RadiusBottomRight: =60
+                        RadiusTopLeft: =60
+                        RadiusTopRight: =60
+                        Width: =25
+                        X: =lblPendingRequestHomeFocalPoint_3.X
+                        Y: =lblPendingRequestHomeFocalPoint_3.Y +20
+                        ZIndex: =7
+
+                    txtPendingRequestHomeFocalPoint_3 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: = FontWeight.Normal
+                        Height: =20
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =11.86
+                        Text: =ThisItem.'Approve By IT'.DisplayName
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =132.00
+                        X: =imgPendingRequestHomeFocalPoint_3.X +30
+                        Y: =imgPendingRequestHomeFocalPoint_3.Y + imgPendingRequestHomeFocalPoint_3.Height/2 - Self.Height/2
+                        ZIndex: =8
+
+                    lblPendingRequestHomeFocalPoint_3 As label:
+                        AutoHeight: =true
+                        Font: =Font.'Segoe UI'
+                        Height: =17
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.small
+                        Text: =" Approved by"
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =113.00
+                        X: =536
+                        Y: =266
+                        ZIndex: =9
+
+                    txtPendingRequestHomeDateRequest_3 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: = FontWeight.Normal
+                        Height: =21
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =11.86
+                        Text: =Text(ThisItem.'Focal Point Date', "mmm dd, yyyy")
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =147.00
+                        X: =233
+                        Y: =293
+                        ZIndex: =10
+
+                    lblPendingRequestHomeDateRequest_3 As label:
+                        Font: =Font.'Segoe UI'
+                        Height: =11
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.small
+                        Text: ="Date of Approval"
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =94
+                        X: =224
+                        Y: =266
+                        ZIndex: =11
+
+                    txtPendingRequestHomeDateRequest_4 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: = FontWeight.Normal
+                        Height: =21
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =11.86
+                        Text: =Text(ThisItem.'IT Date', "mmm dd, yyyy")
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =147.00
+                        X: =182
+                        Y: =427
+                        ZIndex: =12
+
+                    lblPendingRequestHomeDateRequest_4 As label:
+                        Font: =Font.'Segoe UI'
+                        Height: =16
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.small
+                        Text: ="Date of Approval"
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =104
+                        X: =746
+                        Y: =270
+                        ZIndex: =13
+
+                    txSN_7 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: = FontWeight.Normal
+                        Height: =30
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =11.86
+                        Text: =ThisItem.'IT Comments'
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =416
+                        X: =536
+                        Y: =353
+                        ZIndex: =14
+
+                    txSN_8 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: = FontWeight.Normal
+                        Height: =30
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =11.86
+                        Text: =ThisItem.'Focal Point Comments'
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =448
+                        X: =15
+                        Y: =353
+                        ZIndex: =15
+
+                    lblPendingRequestHomeDateRequest_5 As label:
+                        AutoHeight: =true
+                        Font: =Font.'Segoe UI'
+                        Height: =15
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.small
+                        Text: ="Commenst Focal Point "
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =180
+                        X: =15
+                        Y: =327
+                        ZIndex: =16
+
+                    lblPendingRequestHomeDateRequest_6 As label:
+                        AutoHeight: =true
+                        Font: =Font.'Segoe UI'
+                        Height: =15
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.small
+                        Text: ="Commenst IT"
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =180
+                        X: =535
+                        Y: =329
+                        ZIndex: =17
+
+                    lblPendingRequestHomeDateRequest_2 As label:
+                        AutoHeight: =true
+                        Font: =Font.'Segoe UI'
+                        Height: =15
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.small
+                        Text: ="Serial Number"
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =130
+                        X: =15
+                        Y: =46
+                        ZIndex: =18
+
+                    txtPendingRequestHomeDateRequest_5 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: = FontWeight.Normal
+                        Height: =21
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.medium
+                        Text: =ThisItem.'Business Unit'
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =130
+                        X: =lblPendingRequestHomeDateRequest_7.X
+                        Y: =lblPendingRequestHomeDateRequest_7.Y +lblPendingRequestHomeDateRequest_7.Height
+                        ZIndex: =19
+
+                    lblPendingRequestHomeDateRequest_7 As label:
+                        Font: =Font.'Segoe UI'
+                        Height: =13
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.small
+                        Text: ="Business Unit"
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =130
+                        X: =15
+                        Y: =95
+                        ZIndex: =20
+
+                    txtPendingRequestHomeDateRequest_6 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: = FontWeight.Normal
+                        Height: =21
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.medium
+                        Text: =Text(ThisItem.'Request Date', "mmm dd, yyyy")
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =130
+                        X: =lblPendingRequestHomeDateRequest_8.X
+                        Y: =lblPendingRequestHomeDateRequest_8.Y +lblPendingRequestHomeDateRequest_8.Height
+                        ZIndex: =21
+
+                    lblPendingRequestHomeDateRequest_8 As label:
+                        Font: =Font.'Segoe UI'
+                        Height: =13
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.small
+                        Text: ="Date Request"
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =130
+                        X: =154
+                        Y: =46
+                        ZIndex: =22
+
+                    lblPendingRequestHomeDateRequest_9 As label:
+                        AutoHeight: =true
+                        Font: =Font.'Segoe UI'
+                        Height: =13
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.small
+                        Text: ="Manufactured"
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =130
+                        X: =323
+                        Y: =46
+                        ZIndex: =23
+
+                    txtPendingRequestHomeDateRequest_8 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: = FontWeight.Normal
+                        Height: =21
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.medium
+                        Text: =ThisItem.'Product Line'.Value
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =251
+                        X: =lblPendingRequestHomeDateRequest_10.X
+                        Y: =lblPendingRequestHomeDateRequest_10.Y +lblPendingRequestHomeDateRequest_10.Height
+                        ZIndex: =24
+
+                    lblPendingRequestHomeDateRequest_10 As label:
+                        AutoHeight: =true
+                        Font: =Font.'Segoe UI'
+                        Height: =15
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.small
+                        Text: ="Product Line"
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =130
+                        X: =323
+                        Y: =150
+                        ZIndex: =25
+
+                    txtPendingRequestHomeDateRequest_9 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: = FontWeight.Normal
+                        Height: =21
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.medium
+                        Text: =ThisItem.Sudlayer
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =147.00
+                        X: =lblPendingRequestHomeDateRequest_11.X
+                        Y: =lblPendingRequestHomeDateRequest_11.Y +lblPendingRequestHomeDateRequest_11.Height
+                        ZIndex: =26
+
+                    lblPendingRequestHomeDateRequest_11 As label:
+                        AutoHeight: =true
+                        Font: =Font.'Segoe UI'
+                        Height: =13
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.small
+                        Text: ="Sudlayer"
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =94
+                        X: =157
+                        Y: =95
+                        ZIndex: =27
+
+                    txtPendingRequestHomeDateRequest_10 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: = FontWeight.Normal
+                        Height: =21
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.medium
+                        Text: =ThisItem.'Contract Account'
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =130
+                        X: =lblPendingRequestHomeDateRequest_12.X
+                        Y: =lblPendingRequestHomeDateRequest_12.Y +lblPendingRequestHomeDateRequest_12.Height
+                        ZIndex: =28
+
+                    lblPendingRequestHomeDateRequest_12 As label:
+                        AutoHeight: =true
+                        Font: =Font.'Segoe UI'
+                        Height: =15
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.small
+                        Text: ="Contract Account"
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =130
+                        X: =323
+                        Y: =95
+                        ZIndex: =29
+
+                    lblPendingRequestHomeDateRequest_13 As label:
+                        AutoHeight: =true
+                        Font: =Font.'Segoe UI'
+                        Height: =13
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.small
+                        Text: ="Status"
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =101
+                        X: =150
+                        Y: =150
+                        ZIndex: =30
+
+                    txtPendingRequestHomeAntennaProcess_3 As text:
+                        Align: =Align.Center
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =0
+                        Color: =RGBA(255, 255, 255, 1)
+                        Default: =ThisItem.'Approval Status'.Value
+                        DisabledColor: =ColorFade(Self.Fill, -80% )
+                        DisabledFill: |-
+                            =Switch(
+                            ThisItem.'Approval Status'.Value,
+                                "Approved", Color.Green,
+                                "Pendiente", Color.Blue, 
+                                "Rejected", Color.Red,
+                                "In Progress", Color.Coral
+                            
+                            )
+                        DisplayMode: =DisplayMode.Disabled
+                        Height: =24
+                        HoverColor: =RGBA(0, 0, 4, 0)
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        RadiusBottomLeft: =50
+                        RadiusBottomRight: =50
+                        RadiusTopLeft: =50
+                        RadiusTopRight: =50
+                        Size: =gblAppStyles.font.medium
+                        Width: =101.00
+                        X: =lblPendingRequestHomeDateRequest_13.X
+                        Y: =lblPendingRequestHomeDateRequest_13.Y +lblPendingRequestHomeDateRequest_13.Height +5
+                        ZIndex: =31
+
+                    lblPendingRequestHomeAntenaProcess_4 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =23
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.medium
+                        Text: ="Location Requirement"
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =449
+                        X: =503
+                        Y: =11
+                        ZIndex: =32
+
+                    drpDetailsManufactured_2 As dropdown:
+                        BorderColor: =gblAppStyles.neutralLight.rgba
+                        BorderThickness: =1
+                        ChevronBackground: =RGBA(56, 96, 18, 0)
+                        ChevronFill: =gblAppStyles.body.rgba
+                        ChevronHoverBackground: =Self.ChevronBackground  
+                        ChevronHoverFill: =Self.ChevronFill
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisplayMode: =DisplayMode.View
+                        Height: =21
+                        HoverFill: =ColorFade(gblAppStyles.neutralLight.rgba, 60%)
+                        Items: |-
+                            =//Choices('Antenna Manager'.Manufactured)
+                            Distinct(
+                                Filter(
+                                    AddColumns(
+                                        'Antenna Manager',
+                                        "ManofacturaAn",
+                                        Manufactured.Value
+                                    ),
+                                    'Serial Number' = drpDetailsSerialNumber_2.Selected.Value
+                                    
+                                ).ManofacturaAn,
+                            ManofacturaAn
+                            )
+                        PaddingLeft: =5
+                        PaddingRight: =10.00
+                        PaddingTop: =10.00
+                        PressedFill: =Self.ChevronBackground
+                        Reset: =true
+                        SelectionColor: =Self.Color
+                        SelectionFill: =Self.HoverFill
+                        Size: =gblAppStyles.font.medium
+                        Width: =140
+                        X: =lblPendingRequestHomeDateRequest_9.X
+                        Y: =lblPendingRequestHomeDateRequest_9.Y +lblPendingRequestHomeDateRequest_9.Height
+                        ZIndex: =33
+
+                    drpDetailsSerialNumber_2 As dropdown:
+                        BorderColor: =gblAppStyles.neutralLight.rgba
+                        BorderThickness: =1
+                        ChevronBackground: =RGBA(56, 96, 18, 0)
+                        ChevronFill: =gblAppStyles.body.rgba
+                        ChevronHoverBackground: =Self.ChevronBackground  
+                        ChevronHoverFill: =Self.ChevronFill
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisplayMode: =DisplayMode.View
+                        Height: =21
+                        HoverFill: =ColorFade(gblAppStyles.neutralLight.rgba, 60%)
+                        Items: =ThisItem.'Serial Number'
+                        PaddingLeft: =5
+                        PaddingRight: =10.00
+                        PaddingTop: =10.00
+                        PressedFill: =Self.ChevronBackground
+                        SelectionColor: =Self.Color
+                        SelectionFill: =Self.HoverFill
+                        Size: =gblAppStyles.font.medium
+                        Width: =140
+                        X: =lblPendingRequestHomeDateRequest_2.X
+                        Y: =lblPendingRequestHomeDateRequest_2.Y +lblPendingRequestHomeDateRequest_2.Height
+                        ZIndex: =34
+
+                    lblPendingRequestHomeAntenaProcess_5 As label:
+                        Font: =Font.'Segoe UI'
+                        Height: =27
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.large
+                        Text: =ThisItem.'Antenna Process'.Value
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =149
+                        X: =172
+                        Y: =13
+                        ZIndex: =35
+
+                    txtPendingRequestHomeDateRequest_11 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: = FontWeight.Normal
+                        Height: =53
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.medium
+                        Text: |-
+                            =Concatenate(
+                                "Latitud:",
+                                ThisItem.Latitude,
+                                ", ",
+                                "Longitud",    
+                                ThisItem.Longitude
+                            )
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =170
+                        X: =lblPendingRequestHomeDateRequest_14.X
+                        Y: =lblPendingRequestHomeDateRequest_14.Y +lblPendingRequestHomeDateRequest_14.Height
+                        ZIndex: =36
+
+                    lblPendingRequestHomeDateRequest_14 As label:
+                        AutoHeight: =true
+                        Font: =Font.'Segoe UI'
+                        Height: =15
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.small
+                        Text: ="Coordinates "
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =130
+                        X: =774
+                        Y: =40
+                        ZIndex: =37
+
+                    lblPendingRequestHomeDateRequest_15 As label:
+                        Font: =Font.'Segoe UI'
+                        Height: =2
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.small
+                        Text: ="Date Request"
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =96
+                        X: =14
+                        Y: =186
+                        ZIndex: =38
+
+                    txtPendingRequestHomeDateRequest_12 As label:
+                        AutoHeight: =true
+                        Font: =Font.'Segoe UI'
+                        FontWeight: = FontWeight.Normal
+                        Height: =21
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.medium
+                        Text: =ThisItem.Sitio
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =96
+                        X: =lblPendingRequestHomeDateRequest_16.X
+                        Y: =lblPendingRequestHomeDateRequest_16.Y +lblPendingRequestHomeDateRequest_16.Height
+                        ZIndex: =39
+
+                    lblPendingRequestHomeDateRequest_16 As label:
+                        AutoHeight: =true
+                        Font: =Font.'Segoe UI'
+                        Height: =15
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.small
+                        Text: ="Site"
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =130
+                        X: =503
+                        Y: =46
+                        ZIndex: =40
+
+                    txtPendingRequestHomeDateRequest_13 As label:
+                        AutoHeight: =true
+                        Font: =Font.'Segoe UI'
+                        FontWeight: = FontWeight.Normal
+                        Height: =21
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.medium
+                        Text: |-
+                            =Concatenate(
+                                ThisItem.District,
+                                ", ",    
+                                ThisItem.Zone,
+                                ", ",
+                                ThisItem.Country
+                            )
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =130
+                        X: =lblPendingRequestHomeDateRequest_17.X
+                        Y: =lblPendingRequestHomeDateRequest_17.Y +lblPendingRequestHomeDateRequest_17.Height
+                        ZIndex: =41
+
+                    lblPendingRequestHomeDateRequest_17 As label:
+                        AutoHeight: =true
+                        Font: =Font.'Segoe UI'
+                        Height: =15
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.small
+                        Text: ="Zone"
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =130
+                        X: =616
+                        Y: =46
+                        ZIndex: =42
+
+                    lblPendingRequestHomeDateRequest_19 As label:
+                        Font: =Font.'Segoe UI'
+                        Height: =13
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.small
+                        Text: ="Service Type"
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =130
+                        X: =15
+                        Y: =150
+                        ZIndex: =43
+
+                    lblPendingRequestHomeAntenaProcess_6 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =26
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.medium
+                        Text: ="Details of the approval"
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =221
+                        X: =14
+                        Y: =232
+                        ZIndex: =44
+
+                    txtPendingRequestHomeDateRequest_7 As label:
+                        Font: =Font.'Segoe UI'
+                        FontWeight: = FontWeight.Normal
+                        Height: =21
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =11.86
+                        Text: =Text(ThisItem.'IT Date', "mmm dd, yyyy")
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =147.00
+                        X: =746
+                        Y: =293
+                        ZIndex: =45
+
+            NavigationIT_10 As NavigationIT_3:
+                AppStyle: |-
+                    ={
+                        fontSizeTitle:17,
+                        colorButtom: RGBA(215,223,240,1),
+                        backgroundColor: RGBA(35,35,37,1 ), 
+                        buttomBackground: RGBA(207,08,63,1)
+                    }
+                Height: =83
+                NavigationNotesIT: =colNavigationIT
+                Visible: =true//gblIsAdmin
+                Width: =697
+                X: =338
+                Y: =8
+                ZIndex: =4
+

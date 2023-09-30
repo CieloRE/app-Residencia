@@ -1,0 +1,22 @@
+[
+  {
+    "HasLibraryLogicalName": true,
+    "InstanceCount": 13,
+    "LibraryId": "e8f3178d-dda7-447b-846a-d1fa56f837ef",
+    "LibraryLogicalName": "crad4_satelliteapp_b8122",
+    "LibraryVersion": "2023-09-30T19:41:14Z",
+    "OriginalComponentDefinitionTemplateId": "12bdc2c53ee147e29e0bdb3efd0580e5",
+    "RefusedSourceLastTimeSaved": "0001-01-01T00:00:00",
+    "SourceLastTimeSaved": "2023-09-30T19:41:20.01+00:00"
+  },
+  {
+    "HasLibraryLogicalName": true,
+    "InstanceCount": 9,
+    "LibraryId": "e8f3178d-dda7-447b-846a-d1fa56f837ef",
+    "LibraryLogicalName": "crad4_satelliteapp_b8122",
+    "LibraryVersion": "2023-09-30T19:41:14Z",
+    "OriginalComponentDefinitionTemplateId": "cdaf23d793cb48909f7058fe409b680e",
+    "RefusedSourceLastTimeSaved": "0001-01-01T00:00:00",
+    "SourceLastTimeSaved": "2023-09-30T19:41:20.01+00:00"
+  }
+]

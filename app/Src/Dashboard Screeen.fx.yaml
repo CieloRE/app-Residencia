@@ -1,0 +1,142 @@
+"'Dashboard Screeen' As screen":
+    Fill: =ColorFade(gblAppStyles.background.rgba, 70%)
+    OnVisible: =
+
+    Container1_4 As groupContainer.horizontalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutMode: =LayoutMode.Auto
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        Width: =1366.00
+        X: =0.00
+        ZIndex: =3
+
+        cmpNavHistory_3 As NavigationIT_1:
+            AppStyle: |-
+                ={
+                    fontSize:12,
+                    fontSizeTitle:14,
+                    colorButtom: RGBA(215,223,240,1),
+                    backgroundColor: RGBA(35,35,37,1 ), 
+                    buttomBackground: RGBA(207,08,63,1)
+                }
+            LayoutMinHeight: =640
+            Logo: ='logo app2'
+            NavigationNotesRequest: =colNavigation
+            Profile: |-
+                ={
+                    Profile: User().Image,
+                    DisplayName: gblUser.displayName,
+                    JobTitle: gblUser.jobTitle
+                }
+            Width: =279.99
+            X: =0.00
+
+        conContenRequestService_3 As groupContainer.manualLayoutContainer:
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            Width: =1086.16
+            X: =279.84
+            ZIndex: =2
+
+            "'cvRequest Service_3' As fluidGrid.fluidGridWithBlankCard":
+                BorderThickness: =0
+                Height: =765
+                Width: =1086
+                X: =0.00
+                Y: =3
+                ZIndex: =2
+
+                DataCard1_4 As dataCard:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    BorderThickness: =0
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =753
+                    Width: =1086
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                    conRequestService_3 As groupContainer.manualLayoutContainer:
+                        Fill: =gblAppStyles.white.rgba
+                        Height: =642
+                        PaddingBottom: =20
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        RadiusBottomLeft: =20
+                        RadiusBottomRight: =20
+                        RadiusTopLeft: =20
+                        RadiusTopRight: =20
+                        Width: =1033
+                        X: =20.00
+                        Y: =97
+                        ZIndex: =1
+
+                        PowerBI1 As powerbi:
+                            BorderThickness: =0
+                            DashboardId: ="e43af38b-bf3e-48f9-b359-3a605cefbaa0"
+                            Height: =594
+                            TileUrl: |-
+                                ="https://app.powerbi.com/embed?dashboardId=e43af38b-bf3e-48f9-b359-3a605cefbaa0&tileId=ee74b0de-ea13-4f72-9a5d-ab440d38b8a9&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVVTLU5PUlRILUNFTlRSQUwtSi1QUklNQVJZLXJlZGlyZWN0LmFuYWx5c2lzLndpbmRvd3MubmV0IiwiZW1iZWRGZWF0dXJlcyI6eyJ1c2FnZU1ldHJpY3NWTmV4dCI6dHJ1ZX19"
+                            Width: =1015
+                            WorkspaceId: ="__my-workspace"
+                            X: =10
+                            Y: =15
+                            ZIndex: =1
+
+                    lblTitleRequest_3 As label:
+                        Color: =gblAppStyles.body.rgba
+                        DisplayMode: =DisplayMode.View
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =33
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.extralarge
+                        Text: ="Antennas Location"
+                        Width: =300
+                        X: =36
+                        Y: =27
+                        ZIndex: =2
+
+                    lblSubtitleRequest_3 As label:
+                        Color: =gblAppStyles.neutralStrong.rgba
+                        DisplayMode: =DisplayMode.View
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =37
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Size: =gblAppStyles.font.normal
+                        Text: =
+                        Width: =373
+                        X: =lblTitleRequest_3.X
+                        Y: =60
+                        ZIndex: =3
+
+    NavigationIT_16 As NavigationIT_3:
+        AppStyle: |-
+            ={
+                fontSizeTitle:17,
+                colorButtom: RGBA(215,223,240,1),
+                backgroundColor: RGBA(35,35,37,1 ), 
+                buttomBackground: RGBA(207,08,63,1)
+            }
+        Height: =74
+        NavigationNotesIT: =colNavigationIT
+        Visible: =true//gblIsAdmin
+        Width: =698
+        X: =634
+        Y: =18
+        ZIndex: =4
+
