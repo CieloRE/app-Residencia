@@ -180,7 +180,7 @@
                         HoverColor: =Self.Color
                         HoverFill: =ColorFade(Self.Fill, 50%)
                         OnSelect: |-
-                            =Set(gblSelectedRequest, ThisItem);
+                            =Set(gblSelectedRequestFC, ThisItem);
                             Navigate('Approval Details Screen');
                         PaddingRight: =5.00
                         PaddingTop: =5.00

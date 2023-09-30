@@ -276,7 +276,7 @@
                             OnSelect: |-
                                 =Patch(
                                     'Request for Satellite Service',
-                                    gblSelectedRequest,
+                                    gblSelectedRequestFC,
                                     {
                                        'Approve By FP':{
                                             Claims: "i:0#.f|membership|" & gblUser.userPrincipalName,
