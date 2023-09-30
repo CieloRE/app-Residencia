@@ -705,7 +705,6 @@
                             PaddingTop: =5.00
                             Size: =11.86
                             Text: ="Submit"
-                            Visible: =If (gblSelectedAntennaEdit.Manufactured.Value= "Starlink")
                             Width: =100.00
                             X: =175.00
                             Y: =925
