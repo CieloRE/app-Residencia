@@ -316,7 +316,7 @@
                                     'Antenna Manager',
                                     LookUp(
                                         'Antenna Manager',
-                                        gblSelectedRequestIT.ID = ID
+                                        ID =  gblSelectedRequestIT.'Serial Number'.Id
                                     ),
                                     {Country:gblSelectedRequestIT.Country,
                                     Zone:gblSelectedRequestIT.Zone,

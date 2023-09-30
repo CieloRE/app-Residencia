@@ -151,7 +151,7 @@
                         RadiusTopLeft: =60
                         RadiusTopRight: =60
                         Width: =35
-                        X: =399
+                        X: =415
                         Y: =43
                         ZIndex: =12
 
@@ -159,7 +159,7 @@
                         AutoHeight: =true
                         Font: =Font.'Segoe UI'
                         FontWeight: = FontWeight.Normal
-                        Height: =21
+                        Height: =23
                         OnSelect: =Select(Parent)
                         PaddingBottom: =0
                         PaddingLeft: =0
@@ -168,7 +168,7 @@
                         Size: =11.86
                         Text: =ThisItem.Person.DisplayName
                         VerticalAlign: =VerticalAlign.Top
-                        Width: =lblTHRequestor_1.Width -35
+                        Width: =86
                         X: =451
                         Y: =47
                         ZIndex: =13
