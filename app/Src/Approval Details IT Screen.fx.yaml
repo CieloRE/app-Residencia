@@ -326,8 +326,8 @@
                                     Sudlayer:"TLG",
                                     'Contract Account':Value(gblSelectedRequestIT.'Contract Account'),
                                     Latitude:Value(gblSelectedRequestIT.Latitude),
-                                    Longitude:Value(gblSelectedRequestIT.Longitude),
-                                    'has a request': false
+                                    Longitude:Value(gblSelectedRequestIT.Longitude)
+                                    
                                         }
                                 );
                                 
@@ -340,6 +340,19 @@
                                     ),
                                     {
                                     Status:If( gblSelectedRequestIT.'Antenna Process'.Id = 2,{Value:"Inactivo"}, {Value:"Activo"})
+                                        }
+                                );
+                                
+                                
+                                Patch(
+                                
+                                    'Antenna Manager',
+                                    LookUp(
+                                        'Antenna Manager',
+                                        ID =  gblSelectedRequestIT.'Serial Number'.Id
+                                    ),
+                                    {
+                                    'has a request': false
                                         }
                                 );
                             PaddingRight: =5.00
