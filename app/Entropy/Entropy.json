@@ -605,7 +605,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "09/30/2023 21:39:23",
+  "HeaderLastSavedDateTimeUTC": "09/30/2023 21:42:46",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "0648b904-c83a-4469-9310-aa651bc955bb": "\"/providers/microsoft.powerapps/apis/shared_office365groups/connections/a4db39eceea4403b95386af093d6c74b\"",
@@ -624,6 +624,7 @@
   "LocalResourceFileNames": {
     "logo app": "fa6fdf2b-46d1-4de3-aa96-48963eb11017.png",
     "logo app2": "f8ae073a-a036-4582-938a-b75d72429904.png",
+    "logo png": "8c5b5206-9783-4160-9783-8717532244d7.png",
     "offshore": "93aef802-4a96-49ad-9970-abd10d9074e5.png",
     "onshore": "a9434668-bc01-48b4-b9e1-ff579e85c848.png",
     "satellite-axesat": "5f73739f-5ac9-4f3a-8309-968ce83de920.png",
@@ -634,6 +635,7 @@
   "LocalResourceRootPaths": {
     "logo app": "https://docserverpwaprodwus.blob.core.windows.net/c03d54e3-ffb0-44fa-8fc9-de8a1790cd2a-1/resource/d2542571-2fa2-4145-ae5b-84a08fc0b55e.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2023-09-30T19%3A39%3A12Z&ske=2023-10-01T19%3A54%3A12Z&sks=b&skv=2021-08-06&sv=2021-08-06&spr=https&se=2023-10-01T19%3A54%3A12Z&sr=b&sp=r&sig=T9uR5V3TNzrG3sQkWT%2BLJ3mfSttrd9loIWSvS9%2BIDOo%3D",
     "logo app2": "https://docserverpwaprodwus.blob.core.windows.net/c03d54e3-ffb0-44fa-8fc9-de8a1790cd2a-1/resource/a60510b7-f499-4199-aaa0-a1dbc3fcb0f0.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2023-09-30T19%3A44%3A38Z&ske=2023-10-01T19%3A59%3A38Z&sks=b&skv=2021-08-06&sv=2021-08-06&spr=https&se=2023-10-01T19%3A59%3A38Z&sr=b&sp=r&sig=b%2B0FPdux9dElpF5iUKwdVZFQdVJ3NxMcy27vMKJpICI%3D",
+    "logo png": "https://docserverpwaprodwus.blob.core.windows.net/c03d54e3-ffb0-44fa-8fc9-de8a1790cd2a-1/resource/cc2447c8-ce90-4cee-a822-4153079c3a22.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2023-09-30T21%3A42%3A37Z&ske=2023-10-01T21%3A57%3A37Z&sks=b&skv=2021-08-06&sv=2021-08-06&spr=https&se=2023-10-01T21%3A57%3A37Z&sr=b&sp=r&sig=lV9YIQAQO5cuYZyTkhJZhG494hI6OwWGq0m6OhwIzKY%3D",
     "offshore": "https://docserverpwaprodwus.blob.core.windows.net/c03d54e3-ffb0-44fa-8fc9-de8a1790cd2a-1/resource/Assets0Images093aef802-4a96-49ad-9970-abd10d9074e5.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2023-09-30T17%3A32%3A41Z&ske=2023-10-01T17%3A47%3A41Z&sks=b&skv=2021-08-06&sv=2021-08-06&spr=https&se=2023-10-01T17%3A47%3A41Z&sr=b&sp=r&sig=eSUJ6venAhImTR%2BrkvxkC9neYb072T578owUI8ccwiQ%3D",
     "onshore": "https://docserverpwaprodwus.blob.core.windows.net/c03d54e3-ffb0-44fa-8fc9-de8a1790cd2a-1/resource/Assets0Images0a9434668-bc01-48b4-b9e1-ff579e85c848.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2023-09-30T17%3A32%3A41Z&ske=2023-10-01T17%3A47%3A41Z&sks=b&skv=2021-08-06&sv=2021-08-06&spr=https&se=2023-10-01T17%3A47%3A41Z&sr=b&sp=r&sig=XQeCp8PkL3DoosWLv%2FbIIbT4PRgQSvOo1kAy2YDkocs%3D",
     "satellite-axesat": "https://docserverpwaprodwus.blob.core.windows.net/c03d54e3-ffb0-44fa-8fc9-de8a1790cd2a-1/resource/Assets0Images05f73739f-5ac9-4f3a-8309-968ce83de920.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2023-09-30T17%3A32%3A41Z&ske=2023-10-01T17%3A47%3A41Z&sks=b&skv=2021-08-06&sv=2021-08-06&spr=https&se=2023-10-01T17%3A47%3A41Z&sr=b&sp=r&sig=MdZ4qz5t6Q69lhnbpkdq3TqEqqxnGd5wenNYY%2BVwdbY%3D",
@@ -1901,6 +1903,7 @@
   "ResourcesJsonIndices": {
     "Image-logo app": 7,
     "Image-logo app2": 8,
+    "Image-logo png": 9,
     "Image-offshore": 3,
     "Image-onshore": 2,
     "Image-SampleImage": 0,
