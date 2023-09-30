@@ -1126,7 +1126,7 @@
                                         'Antenna Manager',
                                          drpSerialNumber.Selected.ID = ID
                                     ),
-                                    {'has a request': false}
+                                    {'has a request': true}
                                 );
                             PaddingRight: =5.00
                             PaddingTop: =5.00

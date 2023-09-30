@@ -307,7 +307,7 @@
                                     'Contract Account':Value("lblDetailsCan_1"),
                                     Latitude:Value(gblSelectedRequestIT.Latitude),
                                     Longitude:Value(gblSelectedRequestIT.Longitude),
-                                    'has a request': true
+                                    'has a request': false
                                         }
                                 );
                                 
