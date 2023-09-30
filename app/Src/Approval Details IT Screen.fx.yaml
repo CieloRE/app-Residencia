@@ -342,7 +342,7 @@
                         btnReject_1 As button:
                             Fill: =gblAppColors.tertiaryAccentDefault.rgba
                             HoverFill: =ColorFade(Self.Fill, -30%)
-                            OnSelect: |
+                            OnSelect: |+
                                 =Patch(
                                     'Request for Satellite Service',
                                     gblSelectedRequest,
@@ -376,7 +376,23 @@
                                         NotificationType.Error,
                                         2000
                                     )
-                                )
+                                );
+                                
+                                Patch(
+                                
+                                    'Antenna Manager',
+                                    LookUp(
+                                        'Antenna Manager',
+                                        ID =  gblSelectedRequestIT.'Serial Number'.Id
+                                    ),
+                                   {
+                                    'has a request': false
+                                        }
+                                );
+                                
+                                
+                                
+                                
                             PaddingRight: =5.00
                             PaddingTop: =5.00
                             Size: =11.86
