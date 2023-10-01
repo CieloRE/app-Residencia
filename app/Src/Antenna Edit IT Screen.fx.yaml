@@ -55,7 +55,7 @@
                     BorderThickness: =0
                     DisplayMode: =DisplayMode.Edit
                     Fill: =RGBA(0, 0, 0, 0)
-                    Height: =1329
+                    Height: =1183
                     Width: =1086
                     X: =0
                     Y: =0
@@ -63,7 +63,7 @@
 
                     conRequestService_2 As groupContainer.manualLayoutContainer:
                         Fill: =gblAppStyles.white.rgba
-                        Height: =1132
+                        Height: =1004
                         PaddingBottom: =20
                         PaddingRight: =0.00
                         PaddingTop: =0.00
@@ -1071,6 +1071,7 @@
                         DatePicker2_1 As datepicker:
                             BorderColor: =gblAppStyles.neutralStrong.rgba
                             BorderThickness: =1
+                            DefaultDate: =gblSelectedAntennaEdit.'Purchase Date'
                             FocusedBorderThickness: =1
                             Height: =41
                             IconBackground: =RGBA(2,2,2,0)
