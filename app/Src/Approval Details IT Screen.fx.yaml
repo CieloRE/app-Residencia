@@ -327,8 +327,7 @@
                                     'Contract Account':Value(gblSelectedRequestIT.'Contract Account'),
                                     Latitude:Value(gblSelectedRequestIT.Latitude),
                                     Longitude:Value(gblSelectedRequestIT.Longitude),
-                                    'Product Line':{Id:gblSelectedRequestIT.'Product Line'.Id,Value: "gblSelectedRequestIT.Title"},
-                                    'has a request': false
+                                    'Product Line':{Id:gblSelectedRequestIT.'Product Line'.Id,Value: "gblSelectedRequestIT.Title"}
                                     }
                                 );
                                 
@@ -528,10 +527,7 @@
                             Size: =11.86
                             Text: |-
                                 =Concatenate(
-                                    "Pozo:           ",
-                                    gblSelectedRequestIT.Sitio,
-                                    ",                                                                                       ",
-                                    "Dirección:   ",
+                                    "Dirección: ",
                                     gblSelectedRequestIT.District,
                                     ", ",    
                                     gblSelectedRequestIT.Zone,
@@ -539,8 +535,8 @@
                                     gblSelectedRequestIT.Country
                                 )
                             Width: =536.00
-                            X: =432.00
-                            Y: =350
+                            X: =433
+                            Y: =371
                             ZIndex: =50
 
                         btnCancelApprove_1 As button:
@@ -555,7 +551,7 @@
                             Size: =11.86
                             Text: ="Cancel"
                             Width: =96.00
-                            X: =432
+                            X: =384
                             Y: =576
                             ZIndex: =51
 
@@ -696,4 +692,20 @@
                             X: =138
                             Y: =483
                             ZIndex: =59
+
+                        lblDetailsSitio_2 As label:
+                            Font: =Font.'Segoe UI'
+                            Height: =31
+                            PaddingRight: =5.00
+                            PaddingTop: =5.00
+                            Size: =11.86
+                            Text: |-
+                                =Concatenate(
+                                    "Pozo:           ",
+                                    gblSelectedRequestIT.Sitio
+                                )
+                            Width: =536.00
+                            X: =432
+                            Y: =340
+                            ZIndex: =60
 

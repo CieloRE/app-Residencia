@@ -110,7 +110,7 @@
         "Name": "lblAppTitle",
         "Parent": "NavigationIT_1",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 549,
+        "PublishOrderIndex": 550,
         "Rules": [
           {
             "Category": "Data",
@@ -480,7 +480,7 @@
         "Name": "imgAppTitle",
         "Parent": "NavigationIT_1",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 550,
+        "PublishOrderIndex": 551,
         "Rules": [
           {
             "Category": "Data",
@@ -703,7 +703,7 @@
             "Name": "galleryTemplate2",
             "Parent": "Gallery2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 552,
+            "PublishOrderIndex": 553,
             "Rules": [
               {
                 "Category": "Design",
@@ -790,7 +790,7 @@
             "Name": "Rectangle5",
             "Parent": "Gallery2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 553,
+            "PublishOrderIndex": 554,
             "Rules": [
               {
                 "Category": "Design",
@@ -1110,7 +1110,7 @@
             "Name": "btmNavigation",
             "Parent": "Gallery2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 554,
+            "PublishOrderIndex": 555,
             "Rules": [
               {
                 "Category": "Data",
@@ -1465,7 +1465,7 @@
             "Name": "imgIconNavigation",
             "Parent": "Gallery2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 555,
+            "PublishOrderIndex": 556,
             "Rules": [
               {
                 "Category": "Data",
@@ -1712,7 +1712,7 @@
             "Name": "Separator5",
             "Parent": "Gallery2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 556,
+            "PublishOrderIndex": 557,
             "Rules": [
               {
                 "Category": "Design",
@@ -1910,7 +1910,7 @@
         "Name": "Gallery2",
         "Parent": "NavigationIT_1",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 551,
+        "PublishOrderIndex": 552,
         "Rules": [
           {
             "Category": "Data",
@@ -2210,7 +2210,7 @@
         "Name": "imgProfilePicture",
         "Parent": "NavigationIT_1",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 557,
+        "PublishOrderIndex": 558,
         "Rules": [
           {
             "Category": "Data",
@@ -2538,7 +2538,7 @@
         "Name": "lblProfileName",
         "Parent": "NavigationIT_1",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 558,
+        "PublishOrderIndex": 559,
         "Rules": [
           {
             "Category": "Data",
@@ -2932,7 +2932,7 @@
         "Name": "lblProfileJobTitle",
         "Parent": "NavigationIT_1",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 559,
+        "PublishOrderIndex": 560,
         "Rules": [
           {
             "Category": "Data",

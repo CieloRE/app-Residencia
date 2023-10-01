@@ -2966,7 +2966,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblTHAnntennaProcess_1",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3311,7 +3311,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblTHComments_1",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3649,7 +3649,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblTHDataRequest_1",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3972,7 +3972,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblTHDecision_1",
-      "ParentIndex": 0,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4319,7 +4319,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblTHRequestor_1",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4657,7 +4657,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblTHSerialNumber_1",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
