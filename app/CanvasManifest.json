@@ -11,7 +11,7 @@
   },
   "Properties": {
     "AppCreationSource": "AppFromScratch",
-    "AppDescription": "Version final de proyecto",
+    "AppDescription": "Version final de proyect",
     "AppPreviewFlagsMap": {
       "aibuilderserviceenrollment": false,
       "allowmultiplescreensincanvaspages": false,
@@ -115,7 +115,7 @@
     "InstrumentationKey": "",
     "LocalDatabaseReferences": "{}",
     "ManualOfflineProfileId": "",
-    "Name": "App%2Bde%2BGesti%25c3%25b3n%2Bde%2BServicios%2BSatelital.msapp",
+    "Name": "App de Gestión de Servicios Satelital",
     "OriginatingVersion": "1.334",
     "ParserErrorCount": 0,
     "ShowStatusBar": false
