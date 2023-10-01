@@ -8,7 +8,7 @@
         Set(
             gblIsAdmin,
             !IsEmpty(
-                Filter(//Informacion visible para el propietario del grupo
+                Filter(//Informacion visible para el propietario del grupo e integrantes    
                     Office365Groups.ListOwnedGroupsV3().value,
                     id = "28e64659-787d-4981-af3a-d2813765d788"
                 )
@@ -22,9 +22,6 @@
             )
         );
         
-        //Todos los usuarios 
-        
-        Set(gblUsuarios, Office365Users.SearchUserV2());
         
         //trae parametros de office que necesita para el uso de datos que nos deja manejar 
         Concurrent(
@@ -175,7 +172,7 @@
                 }
             }
         );
-        //Limpiar el nav 
+        //coleccion de  datos para navegacion de usuario comun 
         
         ClearCollect(
             colNavigation, 
@@ -217,7 +214,7 @@
         
         );
         
-        
+        //coleccion de  datos para navegacion de usuario IT 
         ClearCollect(
             colNavigationIT,
             {
@@ -268,8 +265,8 @@
         Size: =13.00
         Visible: =false
         Width: =160.00
-        X: =525.00
-        Y: =520
+        X: =925
+        Y: =659
         ZIndex: =1
 
     lblLoading As label:
@@ -279,8 +276,8 @@
         Size: =28.00
         Text: ="Loadign.."
         Width: =192.99
-        X: =536
-        Y: =600
+        X: =512
+        Y: =614
         ZIndex: =2
 
     Image1 As image:
@@ -296,11 +293,11 @@
     Spinner1 As Spinner:
         BasePaletteColor: =""
         DisplayMode: =DisplayMode.Edit
-        Height: =139
+        Height: =94
         SpinnerSize: ='Spinner.SpinnerSize'.Huge
         Width: =210
-        X: =500
-        Y: =628
+        X: =503
+        Y: =520
         ZIndex: =5
 
     Image4 As image:
