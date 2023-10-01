@@ -343,6 +343,18 @@
                                     Status:If( gblSelectedRequestIT.'Antenna Process'.Id = 2,{Value:"Inactivo"}, {Value:"Activo"})
                                         }
                                 );
+                                
+                                Patch(
+                                
+                                    'Antenna Manager',
+                                    LookUp(
+                                        'Antenna Manager',
+                                        ID =  gblSelectedRequestIT.'Serial Number'.Id
+                                    ),
+                                    {
+                                    'has a request': false
+                                        }
+                                );
                             PaddingRight: =5.00
                             PaddingTop: =5.00
                             Size: =11.86

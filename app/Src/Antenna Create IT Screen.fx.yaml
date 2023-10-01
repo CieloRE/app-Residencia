@@ -1069,6 +1069,7 @@
                         DatePicker2 As datepicker:
                             BorderColor: =gblAppStyles.neutralStrong.rgba
                             BorderThickness: =1
+                            DefaultDate: =
                             FocusedBorderThickness: =1
                             Height: =41
                             IconBackground: =RGBA(2,2,2,0)
