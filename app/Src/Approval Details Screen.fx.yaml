@@ -322,7 +322,7 @@
                             OnSelect: |
                                 =Patch(
                                     'Request for Satellite Service',
-                                    gblSelectedRequest,
+                                    gblSelectedRequestFC,
                                     {
                                        'Approve By FP':{
                                             Claims: "i:0#.f|membership|" & gblUser.userPrincipalName,
@@ -359,7 +359,7 @@
                                     'Antenna Manager',
                                     LookUp(
                                         'Antenna Manager',
-                                        ID =  gblSelectedRequestIT.'Serial Number'.Id
+                                        ID =  gblSelectedRequestFC.'Serial Number'.Id
                                     ),
                                     {
                                     'has a request': false
@@ -398,7 +398,7 @@
                             PaddingRight: =5.00
                             PaddingTop: =5.00
                             Size: =11.86
-                            Text: =gblSelectedRequest.'Product Line'.Value
+                            Text: =gblSelectedRequestFC.'Product Line'.Value
                             Width: =183
                             X: =432.00
                             Y: =256
@@ -410,7 +410,7 @@
                             PaddingRight: =5.00
                             PaddingTop: =5.00
                             Size: =11.86
-                            Text: =gblSelectedRequest.'Service Type'.Value
+                            Text: =gblSelectedRequestFC.'Service Type'.Value
                             Width: =157.00
                             X: =445
                             Y: =300
@@ -422,7 +422,7 @@
                             PaddingRight: =5.00
                             PaddingTop: =5.00
                             Size: =11.86
-                            Text: =gblSelectedRequest.'Antenna Process'.Value
+                            Text: =gblSelectedRequestFC.'Antenna Process'.Value
                             Width: =157.00
                             X: =788
                             Y: =262
@@ -434,7 +434,7 @@
                             PaddingRight: =5.00
                             PaddingTop: =5.00
                             Size: =11.86
-                            Text: =gblSelectedRequest.'Business Unit'
+                            Text: =gblSelectedRequestFC.'Business Unit'
                             Width: =157.00
                             X: =130
                             Y: =342
@@ -446,7 +446,7 @@
                             PaddingRight: =5.00
                             PaddingTop: =5.00
                             Size: =11.86
-                            Text: =gblSelectedRequest.'Contract Account'
+                            Text: =gblSelectedRequestFC.'Contract Account'
                             Width: =157.00
                             X: =788
                             Y: =296
@@ -458,7 +458,7 @@
                             PaddingRight: =5.00
                             PaddingTop: =5.00
                             Size: =11.86
-                            Text: =gblSelectedRequest.'Request Comments'
+                            Text: =gblSelectedRequestFC.'Request Comments'
                             VerticalAlign: =VerticalAlign.Top
                             Width: =201
                             X: =130
@@ -474,14 +474,14 @@
                             Text: |-
                                 =Concatenate(
                                     "Pozo:           ",
-                                    gblSelectedRequest.Sitio,
+                                    gblSelectedRequestFC.Sitio,
                                     ",                                                                                       ",
                                     "Dirección:   ",
-                                    gblSelectedRequest.District,
+                                    gblSelectedRequestFC.District,
                                     ", ",    
-                                    gblSelectedRequest.Zone,
+                                    gblSelectedRequestFC.Zone,
                                     ", ",
-                                    gblSelectedRequest.Country
+                                    gblSelectedRequestFC.Country
                                 )
                             Width: =536.00
                             X: =425
@@ -551,7 +551,7 @@
                             DisplayMode: =DisplayMode.View
                             Height: =29
                             HoverFill: =ColorFade(gblAppStyles.neutralLight.rgba, 60%)
-                            Items: =gblSelectedRequest.'Serial Number'
+                            Items: =gblSelectedRequestFC.'Serial Number'
                             PaddingLeft: =5
                             PaddingRight: =10.00
                             PaddingTop: =10.00
