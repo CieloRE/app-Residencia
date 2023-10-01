@@ -221,6 +221,7 @@
                         Size: =gblAppStyles.font.medium
                         Text: ="Details of the approval (IT Department)"
                         VerticalAlign: =VerticalAlign.Top
+                        Visible: =ThisItem.'Approval Status'.Value="Approved"
                         Width: =319
                         X: =535
                         Y: =235
@@ -236,6 +237,7 @@
                         RadiusBottomRight: =60
                         RadiusTopLeft: =60
                         RadiusTopRight: =60
+                        Visible: =ThisItem.'Approval Status'.Value="Approved"
                         Width: =25
                         X: =lblPendingRequestHomeFocalPoint_3.X
                         Y: =lblPendingRequestHomeFocalPoint_3.Y +20
@@ -253,6 +255,7 @@
                         Size: =11.86
                         Text: =ThisItem.'Approve By IT'.DisplayName
                         VerticalAlign: =VerticalAlign.Top
+                        Visible: =ThisItem.'Approval Status'.Value="Approved"
                         Width: =132.00
                         X: =imgPendingRequestHomeFocalPoint_3.X +30
                         Y: =imgPendingRequestHomeFocalPoint_3.Y + imgPendingRequestHomeFocalPoint_3.Height/2 - Self.Height/2
@@ -270,6 +273,7 @@
                         Size: =gblAppStyles.font.small
                         Text: =" Approved by"
                         VerticalAlign: =VerticalAlign.Top
+                        Visible: =ThisItem.'Approval Status'.Value="Approved"
                         Width: =113.00
                         X: =536
                         Y: =266
@@ -336,6 +340,7 @@
                         Size: =gblAppStyles.font.small
                         Text: ="Date of Approval"
                         VerticalAlign: =VerticalAlign.Top
+                        Visible: =ThisItem.'Approval Status'.Value="Approved"
                         Width: =104
                         X: =746
                         Y: =270
@@ -352,6 +357,7 @@
                         Size: =11.86
                         Text: =ThisItem.'IT Comments'
                         VerticalAlign: =VerticalAlign.Top
+                        Visible: =ThisItem.'Approval Status'.Value="Approved"
                         Width: =416
                         X: =536
                         Y: =353
@@ -402,6 +408,7 @@
                         Size: =gblAppStyles.font.small
                         Text: ="Commenst IT"
                         VerticalAlign: =VerticalAlign.Top
+                        Visible: =ThisItem.'Approval Status'.Value="Approved"
                         Width: =180
                         X: =535
                         Y: =329
@@ -931,6 +938,7 @@
                         Size: =11.86
                         Text: =Text(ThisItem.'IT Date', "mmm dd, yyyy")
                         VerticalAlign: =VerticalAlign.Top
+                        Visible: =ThisItem.'Approval Status'.Value="Approved"
                         Width: =147.00
                         X: =746
                         Y: =293
@@ -946,7 +954,7 @@
                     }
                 Height: =83
                 NavigationNotesIT: =colNavigationIT
-                Visible: =true //gblIsAdmin
+                Visible: =gblIsAdmin
                 Width: =697
                 X: =338
                 Y: =8

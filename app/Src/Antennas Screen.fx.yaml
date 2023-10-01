@@ -64,12 +64,11 @@
                 DelayItemLoading: =true
                 Fill: =ColorFade(gblAppStyles.background.rgba, 70%)
                 Height: =Parent.Height - 180
-                Items: |
-                    =
-                        Filter (
-                            'Antenna Manager',
-                            Person.DisplayName = gblUser.displayName
-                        )
+                Items: |-
+                    =Filter (
+                        'Antenna Manager',
+                        Person.DisplayName = gblUser.displayName
+                    )
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 ShowScrollbar: =false

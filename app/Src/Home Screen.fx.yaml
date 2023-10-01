@@ -187,7 +187,7 @@
                         DisplayMode: =DisplayMode.View
                         Font: =Font.'Segoe UI'
                         FontWeight: =FontWeight.Semibold
-                        Height: =25
+                        Height: =27
                         OnSelect: =
                         PaddingBottom: =0
                         PaddingLeft: =0
@@ -195,7 +195,7 @@
                         PaddingTop: =0.00
                         Size: =gblAppStyles.font.small
                         Text: ="Available"
-                        Width: =Parent.Width - 40
+                        Width: =165
                         X: =lblAntennaLeftTitle.X
                         Y: =lblAntennaLeftUnit.Y + lblAntennaLeftUnit.Height +5
                         ZIndex: =4

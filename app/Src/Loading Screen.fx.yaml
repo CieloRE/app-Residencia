@@ -276,7 +276,7 @@
         Size: =28.00
         Text: ="Loadign.."
         Width: =192.99
-        X: =512
+        X: =536
         Y: =614
         ZIndex: =2
 
@@ -297,7 +297,7 @@
         SpinnerSize: ='Spinner.SpinnerSize'.Huge
         Width: =210
         X: =503
-        Y: =520
+        Y: =546
         ZIndex: =5
 
     Image4 As image:

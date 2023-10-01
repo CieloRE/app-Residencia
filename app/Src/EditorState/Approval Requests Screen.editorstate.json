@@ -2033,7 +2033,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "imgPerson_2",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5524,7 +5524,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "txSN_2",
-      "ParentIndex": 5,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6196,7 +6196,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "txtAntennaProcess_5",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6516,7 +6516,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%TemplateBrowseGalleryTitle.ID%",
       "Name": "txtDateRequest_1",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6804,7 +6804,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "txtPerson_2",
-      "ParentIndex": 6,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
