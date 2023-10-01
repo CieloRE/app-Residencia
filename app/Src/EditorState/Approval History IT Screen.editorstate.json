@@ -1433,7 +1433,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "drpDetailsManufactured_3",
-      "ParentIndex": 10,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1839,7 +1839,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "drpDetailsSerialNumber_3",
-      "ParentIndex": 8,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8157,7 +8157,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblPendingRequestHomeDateRequest_31",
-      "ParentIndex": 19,
+      "ParentIndex": 18,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12488,7 +12488,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "txtPendingRequestHomeDateRequest_14",
-      "ParentIndex": 9,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13075,7 +13075,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "txtPendingRequestHomeDateRequest_16",
-      "ParentIndex": 18,
+      "ParentIndex": 19,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

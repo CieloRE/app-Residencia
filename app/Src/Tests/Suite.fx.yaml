@@ -11,7 +11,7 @@
                 ="Set 'drpManufactured'.Selected to {'Value':""AXESAT""}"
             Screen: =Request Serivce Screen
             Value: |-
-                =SetProperty('drpManufactured'.Selected, {'Value':"AXESAT"})
+                =SetProperty(drpManufactured.Selected, {Value:"AXESAT"})
 
         Step30 As TestStep:
             Description: ="log "
@@ -20,152 +20,152 @@
         Step2 As TestStep:
             Description: ="Select 'drpSerialNumber'"
             Screen: =Request Serivce Screen
-            Value: =Select('drpSerialNumber')
+            Value: =Select(drpSerialNumber)
 
         Step3 As TestStep:
             Description: |-
                 ="Set 'drpAntennaProcess'.Selected to {'Value':""Suspensión""}"
             Screen: =Request Serivce Screen
             Value: |-
-                =SetProperty('drpAntennaProcess'.Selected, {'Value':"Suspensión"})
+                =SetProperty(drpAntennaProcess.Selected, {Value:"Suspensión"})
 
         Step4 As TestStep:
             Description: ="Set 'rdoServiceType'.Selected to ""Onshore"""
             Screen: =Request Serivce Screen
-            Value: =SetProperty('rdoServiceType'.Selected, "Onshore")
+            Value: =SetProperty(rdoServiceType.Selected, "Onshore")
 
         Step5 As TestStep:
             Description: |-
                 ="Set 'drpProductLine'.Selected to {'Value':""LINER HANGERS""}"
             Screen: =Request Serivce Screen
             Value: |-
-                =SetProperty('drpProductLine'.Selected, {'Value':"LINER HANGERS"})
+                =SetProperty(drpProductLine.Selected, {Value:"LINER HANGERS"})
 
         Step6 As TestStep:
             Description: |-
                 ="Set 'cmbFocalPoint'.SelectedItems to Table({'@odata.type':""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"",'Claims':""i:0#.f|membership|allan.hernandez@weatherford.com"",'Department':""ENGINEERING -GENERAL"",'DisplayName':""Hernandez, Allan"",'Email':""allan.hernandez@Weatherford.com"",'JobTitle':""FIELD SPEC IV"",'Picture':""https://weatherford.sharepoint.com/sites/acc/IT_Infraestructura/_layouts/15/UserPhoto.aspx?Size=L&AccountName=allan.hernandez@Weatherford.com""})"
             Screen: =Request Serivce Screen
             Value: |-
-                =SetProperty('cmbFocalPoint'.SelectedItems, Table({'@odata.type':"#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",'Claims':"i:0#.f|membership|allan.hernandez@weatherford.com",'Department':"ENGINEERING -GENERAL",'DisplayName':"Hernandez, Allan",'Email':"allan.hernandez@Weatherford.com",'JobTitle':"FIELD SPEC IV",'Picture':"https://weatherford.sharepoint.com/sites/acc/IT_Infraestructura/_layouts/15/UserPhoto.aspx?Size=L&AccountName=allan.hernandez@Weatherford.com"}))
+                =SetProperty(cmbFocalPoint.SelectedItems, Table({'@odata.type':"#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",Claims:"i:0#.f|membership|allan.hernandez@weatherford.com",Department:"ENGINEERING -GENERAL",DisplayName:"Hernandez, Allan",Email:"allan.hernandez@Weatherford.com",JobTitle:"FIELD SPEC IV",Picture:"https://weatherford.sharepoint.com/sites/acc/IT_Infraestructura/_layouts/15/UserPhoto.aspx?Size=L&AccountName=allan.hernandez@Weatherford.com"}))
 
         Step7 As TestStep:
             Description: ="Select 'cmbFocalPoint'"
             Screen: =Request Serivce Screen
-            Value: =Select('cmbFocalPoint')
+            Value: =Select(cmbFocalPoint)
 
         Step8 As TestStep:
             Description: ="Set 'cmbFocalPoint'.SelectedItems to Table()"
             Screen: =Request Serivce Screen
-            Value: =SetProperty('cmbFocalPoint'.SelectedItems, Table())
+            Value: =SetProperty(cmbFocalPoint.SelectedItems, Table())
 
         Step9 As TestStep:
             Description: |-
                 ="Set 'cmbFocalPoint'.SelectedItems to Table({'@odata.type':""#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser"",'Claims':""i:0#.f|membership|luis.cortes@weatherford.com"",'Department':""IT - FIELD"",'DisplayName':""Cortes, Luis A"",'Email':""Luis.Cortes@weatherford.com"",'JobTitle':""IT DESKTOP TECHNICIAN"",'Picture':""https://weatherford.sharepoint.com/sites/acc/IT_Infraestructura/_layouts/15/UserPhoto.aspx?Size=L&AccountName=Luis.Cortes@weatherford.com""})"
             Screen: =Request Serivce Screen
             Value: |-
-                =SetProperty('cmbFocalPoint'.SelectedItems, Table({'@odata.type':"#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",'Claims':"i:0#.f|membership|luis.cortes@weatherford.com",'Department':"IT - FIELD",'DisplayName':"Cortes, Luis A",'Email':"Luis.Cortes@weatherford.com",'JobTitle':"IT DESKTOP TECHNICIAN",'Picture':"https://weatherford.sharepoint.com/sites/acc/IT_Infraestructura/_layouts/15/UserPhoto.aspx?Size=L&AccountName=Luis.Cortes@weatherford.com"}))
+                =SetProperty(cmbFocalPoint.SelectedItems, Table({'@odata.type':"#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser",Claims:"i:0#.f|membership|luis.cortes@weatherford.com",Department:"IT - FIELD",DisplayName:"Cortes, Luis A",Email:"Luis.Cortes@weatherford.com",JobTitle:"IT DESKTOP TECHNICIAN",Picture:"https://weatherford.sharepoint.com/sites/acc/IT_Infraestructura/_layouts/15/UserPhoto.aspx?Size=L&AccountName=Luis.Cortes@weatherford.com"}))
 
         Step10 As TestStep:
             Description: ="Select 'cmbFocalPoint'"
             Screen: =Request Serivce Screen
-            Value: =Select('cmbFocalPoint')
+            Value: =Select(cmbFocalPoint)
 
         Step11 As TestStep:
             Description: ="Set 'txtBusinessUnit'.Text to ""1213"""
             Screen: =Request Serivce Screen
-            Value: =SetProperty('txtBusinessUnit'.Text, "1213")
+            Value: =SetProperty(txtBusinessUnit.Text, "1213")
 
         Step12 As TestStep:
             Description: ="Set 'txtSudlayer'.Text to ""itg"""
             Screen: =Request Serivce Screen
-            Value: =SetProperty('txtSudlayer'.Text, "itg")
+            Value: =SetProperty(txtSudlayer.Text, "itg")
 
         Step13 As TestStep:
             Description: ="Set 'txtContractAccount'.Text to ""12"""
             Screen: =Request Serivce Screen
-            Value: =SetProperty('txtContractAccount'.Text, "12")
+            Value: =SetProperty(txtContractAccount.Text, "12")
 
         Step14 As TestStep:
             Description: |-
                 ="Set 'drpZone'.Selected to {'Value':""South""}"
             Screen: =Request Serivce Screen
             Value: |-
-                =SetProperty('drpZone'.Selected, {'Value':"South"})
+                =SetProperty(drpZone.Selected, {Value:"South"})
 
         Step15 As TestStep:
             Description: |-
                 ="Set 'drpDistrict'.Selected to {'Value':""Cardenas""}"
             Screen: =Request Serivce Screen
             Value: |-
-                =SetProperty('drpDistrict'.Selected, {'Value':"Cardenas"})
+                =SetProperty(drpDistrict.Selected, {Value:"Cardenas"})
 
         Step16 As TestStep:
             Description: ="Set 'txtLatitude'.Text to ""7.85454545"""
             Screen: =Request Serivce Screen
-            Value: =SetProperty('txtLatitude'.Text, "7.85454545")
+            Value: =SetProperty(txtLatitude.Text, "7.85454545")
 
         Step17 As TestStep:
             Description: ="Set 'txtLongitude'.Text to ""-65.545"""
             Screen: =Request Serivce Screen
-            Value: =SetProperty('txtLongitude'.Text, "-65.545")
+            Value: =SetProperty(txtLongitude.Text, "-65.545")
 
         Step18 As TestStep:
             Description: ="Set 'txtSitio'.Text to ""prueba"""
             Screen: =Request Serivce Screen
-            Value: =SetProperty('txtSitio'.Text, "prueba")
+            Value: =SetProperty(txtSitio.Text, "prueba")
 
         Step19 As TestStep:
             Description: ="Set 'txtComments'.Text to ""test desde app"""
             Screen: =Request Serivce Screen
-            Value: =SetProperty('txtComments'.Text, "test desde app")
+            Value: =SetProperty(txtComments.Text, "test desde app")
 
         Step20 As TestStep:
             Description: ="Select 'btnSave'"
             Screen: =Request Serivce Screen
-            Value: =Select('btnSave')
+            Value: =Select(btnSave)
 
         Step21 As TestStep:
             Description: ="Select 'btnSave_1' in row 1 in 'GalleryRequestService'"
             Screen: =Approval Requests Screen
-            Value: =Select('GalleryRequestService', 1, 'btnSave_1')
+            Value: =Select(GalleryRequestService, 1, btnSave_1)
 
         Step22 As TestStep:
             Description: ="Select 'btnApprove'"
             Screen: =Approval Details Screen
-            Value: =Select('btnApprove')
+            Value: =Select(btnApprove)
 
         Step23 As TestStep:
             Description: ="Select 'btnSave_3' in row 1 in 'GalleryRequestService_1'"
             Screen: =Approval Requests IT Screen
-            Value: =Select('GalleryRequestService_1', 1, 'btnSave_3')
+            Value: =Select(GalleryRequestService_1, 1, btnSave_3)
 
         Step24 As TestStep:
             Description: ="Set 'txtCommentsFocalPoint_1'.Text to ""ok"""
             Screen: =Approval Details IT Screen
-            Value: =SetProperty('txtCommentsFocalPoint_1'.Text, "ok")
+            Value: =SetProperty(txtCommentsFocalPoint_1.Text, "ok")
 
         Step25 As TestStep:
             Description: ="Select 'btnApprove_1'"
             Screen: =Approval Details IT Screen
-            Value: =Select('btnApprove_1')
+            Value: =Select(btnApprove_1)
 
         Step26 As TestStep:
             Description: ="Set 'txtSitio_21'.Text to ""124"""
             Screen: =Antenna Edit IT Screen
-            Value: =SetProperty('txtSitio_21'.Text, "124")
+            Value: =SetProperty(txtSitio_21.Text, "124")
 
         Step27 As TestStep:
             Description: ="Set 'txtContractAccount_2'.Text to ""1246"""
             Screen: =Antenna Edit IT Screen
-            Value: =SetProperty('txtContractAccount_2'.Text, "1246")
+            Value: =SetProperty(txtContractAccount_2.Text, "1246")
 
         Step28 As TestStep:
             Description: ="Set 'txtSitio_2'.Text to ""Sitio cambio"""
             Screen: =Antenna Edit IT Screen
-            Value: =SetProperty('txtSitio_2'.Text, "Sitio cambio")
+            Value: =SetProperty(txtSitio_2.Text, "Sitio cambio")
 
         Step29 As TestStep:
             Description: ="Select 'btnSave_4'"
             Screen: =Antenna Edit IT Screen
-            Value: =Select('btnSave_4')
+            Value: =Select(btnSave_4)
 

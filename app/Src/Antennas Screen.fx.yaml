@@ -361,7 +361,7 @@
                     PaddingRight: =0.00
                     PaddingTop: =0.00
                     Size: =11.86
-                    Text: =ThisItem.'IP Modem WFT'
+                    Text: =ThisItem.Máscara
                     VerticalAlign: =VerticalAlign.Top
                     Visible: =ThisItem.Manufactured.Value ="AXESAT"
                     Width: =113.00

@@ -113,7 +113,13 @@
       "parameterHintsV2": {}
     },
     "datasets": {},
-    "dataSources": [],
+    "dataSources": [
+      "Countries",
+      "Service Type",
+      "Antenna Process",
+      "Product Line",
+      "Antenna Manager"
+    ],
     "dependencies": {},
     "dependents": [
       "4db5f2ec-acbe-40f0-b2ef-c93a1013708d",
