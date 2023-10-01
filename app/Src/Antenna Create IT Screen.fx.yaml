@@ -63,7 +63,7 @@
 
                     conRequestService_1 As groupContainer.manualLayoutContainer:
                         Fill: =gblAppStyles.white.rgba
-                        Height: =1132
+                        Height: =999
                         PaddingBottom: =20
                         PaddingRight: =0.00
                         PaddingTop: =0.00

@@ -1126,7 +1126,7 @@
                         PaddingTop: =0.00
                         Size: =gblAppStyles.font.normal
                         Text: |-
-                            =$"Antenna Seleccionada:{gblSelectedAntennaEdit.'Serial Number'}"
+                            =$"Antenna Seleccionada:{gblSelectedAntennaEdit.Manufactured.Value} {gblSelectedAntennaEdit.'Serial Number'}"
                         Width: =373
                         X: =lblTitleRequest_2.X
                         Y: =60
