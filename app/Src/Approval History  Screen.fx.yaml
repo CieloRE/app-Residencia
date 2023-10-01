@@ -30,6 +30,7 @@
                     Profile: User().Image,
                     DisplayName: gblUser.displayName,
                     JobTitle: gblUser.jobTitle
+                    
                 }
             Width: =279.99
             X: =0.00
