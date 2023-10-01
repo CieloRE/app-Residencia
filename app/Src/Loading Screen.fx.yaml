@@ -25,37 +25,39 @@
         //Todos los usuarios 
         
         Set(gblUsuarios, Office365Users.SearchUserV2());
+        
+        //trae parametros de office que necesita para el uso de datos que nos deja manejar 
         Concurrent(
-        Set(gblUser, Office365Users.MyProfileV2()),
-        Set(
-            gblParameters,
-            {
-                source: Coalesce(Param("source"), "Sistema de Gestión de Servicios Satelital"),
-                groupId: Coalesce(Param("groupId"), "00000000-0000-0000-0000-000000000000"),
-                teamId: Coalesce(Param("teamId"), "19:[team-id]@thread.skype"),
-                channelId: Coalesce( Param("channelId"), "19:[channel-id]@thread.skype"),
-                teamName: Coalesce( Param("teamName"), "Team unknown"),
-                channelName: Coalesce( Param("channelName"), "Channel unknown"),
-                chatId: Coalesce( Param("chatId"), "19:[chat-id]@thread.skype"),
+            Set(gblUser, Office365Users.MyProfileV2()),
+                Set(
+                    gblParameters,
+                    {
+                        source: Coalesce(Param("source"), "Sistema de Gestión de Servicios Satelital"),
+                        groupId: Coalesce(Param("groupId"), "00000000-0000-0000-0000-000000000000"),
+                        teamId: Coalesce(Param("teamId"), "19:[team-id]@thread.skype"),
+                        channelId: Coalesce( Param("channelId"), "19:[channel-id]@thread.skype"),
+                        teamName: Coalesce( Param("teamName"), "Team unknown"),
+                        channelName: Coalesce( Param("channelName"), "Channel unknown"),
+                        chatId: Coalesce( Param("chatId"), "19:[chat-id]@thread.skype"),
         
-                theme: Coalesce( If(Param("theme") = "{theme}","default",Param("theme")), "default"),
+                        theme: Coalesce( If(Param("theme") = "{theme}","default",Param("theme")), "default"),
         
-                channelType: Coalesce( Param("channelType"), ""),
-                teamSiteUrl: Coalesce( Param("teamSiteUrl"), ""),
+                        channelType: Coalesce( Param("channelType"), ""),
+                        teamSiteUrl: Coalesce( Param("teamSiteUrl"), ""),
         
-                locale: Coalesce( Param("locale"), ""),
-                entityId: Coalesce( Param("entityId"), ""),
-                subEntityId: Coalesce( Param("subEntityId"), ""),
-                
-                tid: Coalesce( Param("tid"), ""),
-                isFullScreen: Coalesce( Param("isFullScreen"), ""),
-                userLicenseType: Coalesce( Param("userLicenseType"), ""),
-                tenantSKU: Coalesce( Param("tenantSKU"), ""),
+                        locale: Coalesce( Param("locale"), ""),
+                        entityId: Coalesce( Param("entityId"), ""),
+                        subEntityId: Coalesce( Param("subEntityId"), ""),
+                        
+                        tid: Coalesce( Param("tid"), ""),
+                        isFullScreen: Coalesce( Param("isFullScreen"), ""),
+                        userLicenseType: Coalesce( Param("userLicenseType"), ""),
+                        tenantSKU: Coalesce( Param("tenantSKU"), ""),
         
-                isManager: Param("userTeamRole") = "0",
-                isHostClientWeb: Param("hostClientType") = "web"
-            }
-        )
+                        isManager: Param("userTeamRole") = "0",
+                        isHostClientWeb: Param("hostClientType") = "web"
+                    }
+                )
         );
         
         //App paleta de colores

@@ -213,16 +213,17 @@
                             DefaultSelectedItems: |-
                                 =Office365Users.ManagerV2(gblUser.id)
                                     
-                            DisplayFields: =["DisplayName","JobTitle","Picture"]
+                            DisplayFields: =["Claims","JobTitle","Picture"]
                             Font: =Font.'Segoe UI'
                             Height: =37
+                            IsSearchable: =false
                             Items: =Choices('Request for Satellite Service'.'Focal Point')
                             PaddingRight: =5.00
                             PaddingTop: =5.00
                             PressedColor: =Self.Color
                             PressedFill: =Self.ChevronBackground
-                            SearchFields: =["DisplayName"]
-                            SearchItems: =Choices('Request for Satellite Service'.'Focal Point',cmbFocalPoint_1.SearchText)
+                            SearchFields: =["Claims"]
+                            SearchItems: =[]
                             SelectMultiple: =false
                             Size: =11.86
                             Template: =ListItemTemplate.Person
